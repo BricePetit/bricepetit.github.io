@@ -68,8 +68,8 @@ def create_static_site():
                 
                 with open(filename, 'w', encoding='utf-8') as f:
                     content = response.content.decode('utf-8')
-                    # Ajuster les liens statiques pour GitHub Pages
-                    content = content.replace('/static/', '/BricePetit/static/')
+                    # Ajuster les liens statiques pour GitHub Pages (bricepetit.github.io)
+                    content = content.replace('/static/', '/static/')
                     f.write(content)
             else:
                 print(f"    ❌ Erreur {response.status_code} pour {page_name}")
