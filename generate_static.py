@@ -17,6 +17,7 @@ django.setup()
 from django.test import Client
 from django.urls import reverse
 from django.conf import settings
+from django.utils.translation import activate
 
 def create_static_site():
     """Génère une version statique du site"""
@@ -54,6 +55,9 @@ def create_static_site():
         for page_name, url in pages.items():
             print(f"    - {page_name}.html")
             
+            # Activer la langue pour cette requête
+            activate(lang)
+            
             # Faire la requête avec la langue appropriée
             response = client.get(f'/{lang}{url}', HTTP_ACCEPT_LANGUAGE=lang)
             
@@ -76,6 +80,18 @@ def create_static_site():
                         '<body>',
                         f'<body data-current-lang="{lang}">'
                     )
+                    
+                    # Marquer la bonne option comme sélectionnée dans le sélecteur de langue
+                    if lang == 'fr':
+                        content = content.replace(
+                            '<option value="fr">FR</option>',
+                            '<option value="fr" selected>FR</option>'
+                        )
+                    else:  # lang == 'en'
+                        content = content.replace(
+                            '<option value="en">EN</option>',
+                            '<option value="en" selected>EN</option>'
+                        )
                     
                     f.write(content)
             else:

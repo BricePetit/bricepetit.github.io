@@ -112,20 +112,22 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('language-select');
     if (languageSelect) {
+        // Set initial value based on current page
+        const currentPath = window.location.pathname;
+        const currentLang = document.body.getAttribute('data-current-lang') || 
+                          (currentPath.startsWith('/en/') ? 'en' : 'fr');
+        
+        // Set the correct option as selected
+        languageSelect.value = currentLang;
+        
         languageSelect.addEventListener('change', function() {
             const selectedLang = this.value;
-            const currentPath = window.location.pathname;
             
-            // Detect current language from URL or body data attribute
-            let currentLang = document.body.getAttribute('data-current-lang') || 'fr';
-            if (currentPath.startsWith('/en/')) {
-                currentLang = 'en';
-            } else if (currentPath.startsWith('/fr/')) {
-                currentLang = 'fr';
-            }
+            console.log('Language change requested:', currentLang, '->', selectedLang);
             
             // Don't reload if same language
             if (selectedLang === currentLang) {
+                console.log('Same language, no action needed');
                 return;
             }
             
@@ -151,13 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 newPath += '/';
             }
             
+            console.log('Redirecting to:', newPath);
+            
             // Redirect to new URL
             window.location.href = newPath;
         });
-        
-        // Set correct selection based on current URL or body data
-        const currentLang = document.body.getAttribute('data-current-lang') || 
-                          (window.location.pathname.startsWith('/en/') ? 'en' : 'fr');
-        languageSelect.value = currentLang;
     }
 });
