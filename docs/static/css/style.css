@@ -1,0 +1,105 @@
+/* Principal CSS file for the website - Import CSS modules */
+
+/* Base styles */
+@import url('modules/base.css');
+
+/* Components */
+@import url('modules/header.css');
+@import url('modules/footer.css');
+
+/* Pages */
+@import url('modules/home.css');
+@import url('modules/skills.css');
+@import url('modules/education.css');
+@import url('modules/academic.css');
+@import url('modules/404.css');
+
+/* Common styles and utilities */
+
+/* Flexible container for main content */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Language selector styles */
+.language-selector {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.language-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(80, 200, 120, 0.3);
+    border-radius: 25px;
+    padding: 8px 16px;
+    color: #50C878;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    outline: none;
+}
+
+.language-select:hover {
+    background: rgba(80, 200, 120, 0.1);
+    border-color: #50C878;
+    transform: translateY(-2px);
+}
+
+.language-select:focus {
+    border-color: #4A90A4;
+    box-shadow: 0 0 0 3px rgba(74, 144, 164, 0.2);
+}
+
+.language-select option {
+    background: #ffffff;
+    color: #333;
+    padding: 8px;
+}
+
+/* Global transition for smooth hover effects */
+@media (prefers-reduced-motion: no-preference) {
+    .metric-item {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .enhanced-card {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive global */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    h2 {
+        margin: 15px 25px;
+        font-size: 1.5rem;
+    }
+}

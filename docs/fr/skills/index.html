@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/BricePetit/static/css/style.css">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+        <title>Brice Petit - Compétences &amp; Expertise</title>
+        
+<div class="header_container">
+    <div class="menu_left">
+        <h1><a class="user_id " href="/fr/">Brice Petit</a></h1>
+    </div>
+    <div class="menu_right">
+        <a class="Skills current-page" href="/fr/skills/">Compétences</a>
+        <a class="Academic " href="/fr/academic/">Académique</a>
+        <a class="Education " href="/fr/education/">Formation & Expérience</a>
+        <!-- Language Selector -->
+        <div class="language-selector">
+            
+            
+            
+            <form action="/i18n/setlang/" method="post" style="display: inline;">
+                <input type="hidden" name="csrfmiddlewaretoken" value="vgGbQERrkzNV8Hi4Nr4Lq0wnjq1LoGN249PLQYqAVczhFb5T39W75AHa4SQvH7qc">
+                <select name="language" onchange="this.form.submit()" class="language-select">
+                    
+                        <option value="fr" selected>
+                            FR
+                        </option>
+                    
+                        <option value="en">
+                            EN
+                        </option>
+                    
+                </select>
+            </form>
+        </div>
+    </div>
+</div>
+    </head>
+    <body>
+        <!-- Hero Section for Skills Page -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-icon">💻</div>
+                <h1 class="page-title">Compétences & Projets</h1>
+                <p class="page-subtitle">Expertise Technique & Innovation</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </section>
+        <div class="skills-container">
+            <!-- Skills Level Explanation Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">📋 Échelle des Niveaux de Compétences</h2>
+                <p class="explanation-intro">Les niveaux de compétences techniques sont évalués en fonction de l'expérience pratique et de la complexité des projets réalisés :</p>
+                <div class="level-grid">
+                    <div class="level-item">
+                        <span class="level-badge level-expert">Expert</span>
+                        <p class="level-desc">5+ ans d'expérience, projets avancés, innovation et contribution</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-avance">Avancé</span>
+                        <p class="level-desc">2-5 ans d'expérience, projets complexes, maîtrise approfondie</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-intermediaire">Intermédiaire</span>
+                        <p class="level-desc">1-2 ans d'expérience, projets académiques ou personnels, bonne compréhension</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-debutant">Débutant</span>
+                        <p class="level-desc">Moins d'1 an, apprentissage récent, connaissances de base</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Programming Languages Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">⌨️ Langages de Programmation</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Python</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Main language for ML and DL, data science and web development</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>C++</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Optimisation de code et simulation climatique</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Java</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Développement orienté objet et applications d&#x27;entreprise</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>R</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Analyse statistique et science des données</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Fortran</h3>
+                            <span class="skill-level level-débutant">Débutant</span>
+                        </div>
+                        <p class="skill-description">Code legacy et simulations scientifiques</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ML/DL Frameworks Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🤖 ML et DL</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>TensorFlow</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Deep learning et réseaux de neurones</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>PyTorch</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Recherche en deep learning et prototypage</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Scikit-learn</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Machine learning classique et preprocessing</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>XGBoost</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Gradient boosting pour séries temporelles et prédiction</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Data Science Tools Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">📊 Outils Data Science</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Jupyter</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Développement interactif et prototypage</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Pandas</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Manipulation et analyse de données</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>NumPy</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Calcul numérique et algèbre linéaire</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Matplotlib</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Visualisation de données statiques</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Seaborn</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Visualisation statistique</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Plotly</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Visualisations interactives</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Databases Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🗄️ Databases</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>MySQL</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Base de données relationnelle</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Cassandra</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">NoSQL pour big data et IoT</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- DevOps & Tools Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🛠️ DevOps & Outils</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Docker</h3>
+                            <span class="skill-level level-intermédiaire">Intermédiaire</span>
+                        </div>
+                        <p class="skill-description">Conteneurisation et déploiement</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Git</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Contrôle de version et collaboration</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Expertise Domains Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">⚡ Domaines d'Expertise</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Machine Learning Supervisé</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Classification, régression, optimisation</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Analyse de Séries Temporelles</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Techniques d&#x27;analyse temporelle, détection de tendances et saisonnalité</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Prédiction Énergétique</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Prédiction de consommation et production énergétique en contexte métier</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Communautés d&#x27;Énergie</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Clés de répartition, optimisation communautaire</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Optimisation Énergétique</h3>
+                            <span class="skill-level level-avancé">Avancé</span>
+                        </div>
+                        <p class="skill-description">Production vs consommation, réseaux intelligents</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Languages Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🌍 Langues</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Français</h3>
+                            <span class="skill-level level-natif">Natif</span>
+                        </div>
+                        <p class="skill-description">Langue maternelle</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Anglais</h3>
+                            <span class="skill-level level-c1">C1</span>
+                        </div>
+                        <p class="skill-description">Professionnel et académique</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Néerlandais</h3>
+                            <span class="skill-level level-b1">B1</span>
+                        </div>
+                        <p class="skill-description">Conversationnel</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Featured Projects Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🚀 Projets Principaux</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/RenewgyParser" target="_blank" rel="noopener noreferrer">RenewgyParser</a></h3>
+                        </div>
+                        <p class="project-description">Parseur de données pour l&#x27;entreprise Renewgy</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">Traitement de Données</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/HW-PiCollector" target="_blank" rel="noopener noreferrer">HW-PiCollector</a></h3>
+                        </div>
+                        <p class="project-description">Collecte de données via compteurs intelligents avec Raspberry Pi et Cassandra</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">IoT</span>
+                            
+                            <span class="tech-tag">Cassandra</span>
+                            
+                            <span class="tech-tag">Raspberry Pi</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/AIEG_Forecasting" target="_blank" rel="noopener noreferrer">AIEG Forecasting</a></h3>
+                        </div>
+                        <p class="project-description">Prédiction de consommation et production énergétique</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">TensorFlow</span>
+                            
+                            <span class="tech-tag">Séries Temporelles</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/VdE_interface" target="_blank" rel="noopener noreferrer">VdE Interface</a></h3>
+                        </div>
+                        <p class="project-description">Interface web pour communautés d&#x27;énergie</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Django</span>
+                            
+                            <span class="tech-tag">Développement Web</span>
+                            
+                            <span class="tech-tag">Visualisation de Données</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/VdE_NILM" target="_blank" rel="noopener noreferrer">VdE NILM</a></h3>
+                        </div>
+                        <p class="project-description">Recherche sur la désagrégation de données électriques (abandonné en raison de problèmes de financement)</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">Machine Learning</span>
+                            
+                            <span class="tech-tag">Traitement du Signal</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/AlexandreHnf/Voisin-d-energie-ULB" target="_blank" rel="noopener noreferrer">Base de données Voisin d&#x27;Énergie</a></h3>
+                        </div>
+                        <p class="project-description">Base de données Cassandra pour le projet Voisins d&#x27;Énergie</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Cassandra</span>
+                            
+                            <span class="tech-tag">Conception de Base de Données</span>
+                            
+                            <span class="tech-tag">Données Énergétiques</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/BernSCM_OO_Procedural" target="_blank" rel="noopener noreferrer">BernSCM Climate Model</a></h3>
+                        </div>
+                        <p class="project-description">Conversion d&#x27;un modèle climatique Fortran vers Python et C++ (procédural et orienté objet)</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">C++</span>
+                            
+                            <span class="tech-tag">Fortran</span>
+                            
+                            <span class="tech-tag">Modélisation Climatique</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/BricePetit/ULB-INFO-F308-G5-1920/blob/master/INFO-G5-presentation.pdf" target="_blank" rel="noopener noreferrer">Classification Intelligente de Déchets</a></h3>
+                        </div>
+                        <p class="project-description">Poubelles intelligentes avec classification automatique des déchets par IA</p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">Python</span>
+                            
+                            <span class="tech-tag">Vision par Ordinateur</span>
+                            
+                            <span class="tech-tag">Raspberry Pi</span>
+                            
+                            <span class="tech-tag">IoT</span>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript for scroll animations -->
+        <script>
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        if (entry.target.classList.contains('enhanced-card')) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, 100);
+                        }
+                    }
+                });
+            }, observerOptions);
+            // Observe all fade-in elements.
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.enhanced-card').forEach(el => observer.observe(el));
+            // Smooth scroll for scroll indicator
+            document.querySelector('.scroll-indicator').addEventListener('click', () => {
+                document.querySelector('.skills-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        <!-- Global script animations -->
+        <script src="/BricePetit/static/js/animations.js"></script>
+    </body>
+    <footer>
+        
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Restons en Contact</h3>
+            <div class="contact-links-horizontal">
+                <a href="javascript:void(0)" class="contact-item" onclick="revealEmail()">
+                    <span>📧 Email</span>
+                </a>
+                <a href="https://linkedin.com/in/brice-petit" target="_blank" class="contact-item">
+                    <span>💼 LinkedIn</span>
+                </a>
+                <a href="https://github.com/BricePetit" target="_blank" class="contact-item">
+                    <span>💻 GitHub</span>
+                </a>
+                <a href="https://orcid.org/your-orcid" target="_blank" class="contact-item">
+                    <span>🎓 ORCID</span>
+                </a>
+                <a href="/BricePetit/static/cv/Brice_Petit_CV.pdf" target="_blank" class="contact-item">
+                    <span>📄 CV</span>
+                </a>
+            </div>
+            <div id="email-display" class="email-hidden"></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Brice Petit. Tous droits réservés.</p>
+    </div>
+</footer>
+<script>
+function revealEmail() {
+    const emailParts = ['brice', 'petit', 'ulb', 'be'];
+    const email = emailParts[0] + '.' + emailParts[1] + '@' + emailParts[2] + '.' + emailParts[3];
+    const emailDisplay = document.getElementById('email-display');
+    // Smooth animation with CSS transitions.
+    emailDisplay.style.opacity = '0';
+    emailDisplay.style.transform = 'translateY(-10px)';
+    emailDisplay.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    setTimeout(() => {
+        emailDisplay.innerHTML = '<a href="mailto:' + email + '" class="revealed-email">📧 ' + email + '</a>';
+        emailDisplay.classList.remove('email-hidden');
+        emailDisplay.classList.add('email-revealed');
+        // Smooth appearance animation.
+        emailDisplay.style.opacity = '1';
+        emailDisplay.style.transform = 'translateY(0)';
+    }, 100);
+    // Add a subtle pulse effect after revealing the email.
+    setTimeout(() => {
+        emailDisplay.style.transform = 'scale(1.02)';
+        setTimeout(() => {
+            emailDisplay.style.transform = 'scale(1)';
+        }, 200);
+    }, 500);
+}
+</script>
+    </footer>
+</html>

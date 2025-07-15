@@ -1,0 +1,143 @@
+/* ===== 404 PAGE MODULE ===== */
+
+/* Specific grid for 404 cards */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Enhanced cards on the 404 page - controlled width */
+.enhanced-card {
+    min-height: 300px; /* Minimum height to balance */
+    flex: 1; /* Flex-grow to fill available space */
+}
+
+/* 404 Page Specific Styles */
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideInUp 1s ease-out 0.2s forwards, rotate 2s ease-in-out 1.5s infinite alternate;
+    line-height: 1;
+}
+
+.error-description {
+    font-size: 1.1rem;
+    color: #8B7355;
+    margin: 2rem 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation links styling */
+.navigation-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-links li {
+    margin: 12px 0;
+}
+
+.navigation-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: rgba(80, 200, 120, 0.05);
+    color: #708090;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(80, 200, 120, 0.1);
+}
+
+.navigation-links a:hover {
+    background: rgba(80, 200, 120, 0.1);
+    color: #50C878;
+    transform: translateX(5px);
+    border-color: rgba(80, 200, 120, 0.3);
+}
+
+.navigation-links svg {
+    color: #50C878;
+    flex-shrink: 0;
+}
+
+.contact-link {
+    color: #50C878;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(80, 200, 120, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.contact-link:hover {
+    border-bottom-color: #50C878;
+}
+
+/* Slide in animation for the error icon */
+@keyframes rotate {
+    from {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+/* Specific styles for the 404 page - override of page-hero if necessary */
+.page-hero .page-title {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #50C878;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 8px rgba(80, 200, 120, 0.3);
+}
+
+.page-hero .page-subtitle {
+    font-size: 1.8rem;
+    color: #708090;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Responsive styles for the 404 page */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr; /* Only one column on mobile */
+        gap: 20px;
+    }
+
+    .enhanced-card {
+        min-height: auto; /* No minimum height on mobile */
+    }
+
+    .error-icon {
+        font-size: 3rem;
+    }
+
+    .page-hero .page-title {
+        font-size: 4rem;
+    }
+
+    .page-hero .page-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .error-description {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .navigation-links a {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+}
