@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang='{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}'>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+        <title>{{title}}</title>
+        {% include 'header.html'%}
+    </head>
+    <body>
+        <!-- Hero Section for Academic Page -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-icon">🎓</div>
+                <h1 class="page-title">{% trans "Academic Profile" %}</h1>
+                <p class="page-subtitle">{% trans "Publications & Teaching Experience" %}</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </section>
+        <div class="academic-container">
+            <!-- Section Publications -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">📄 {% trans "Publications" %}</h2>
+                <div class="academic-list">
+                    {% for paper_desc, paper_type in publications.items %}
+                    <div class="academic-item">
+                        <h4 class="academic-title">{{ paper_desc }}</h4>
+                        <span class="academic-type" data-type="publication">{{ paper_type }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Section Courses -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">👨‍🏫 {% trans "Teaching Experience" %}</h2>
+                <div class="academic-list">
+                    {% for course_desc, course_type in courses.items %}
+                    <div class="academic-item">
+                        <h4 class="academic-title">{{ course_desc }}</h4>
+                        <span class="academic-type" data-type="course">{{ course_type }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Global script animations -->
+        <script src="{% static 'js/animations.js' %}"></script>
+    </body>
+    <footer>
+        {% include 'footer.html'%}
+    </footer>
+</html>

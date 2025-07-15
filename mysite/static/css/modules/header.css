@@ -1,0 +1,272 @@
+/* ===== HEADER MODULE ===== */
+
+/* Style for the Header - Fixed and improved */
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    /* Safari compatibility for backdrop-filter */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    /* Fallback for browsers that don't support backdrop-filter */
+    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    padding: 15px 50px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header_container .menu_left {
+    flex-shrink: 0;
+}
+
+.header_container .menu_left h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header_container .menu_left a {
+    color: #708090 !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header_container .menu_left a:hover {
+    color: #50C878 !important;
+}
+
+/* Style for the home page (Brice Petit) link when active */
+.header_container .menu_left a.current-page {
+    color: #50C878 !important;
+    text-shadow: 0 2px 4px rgba(80, 200, 120, 0.2);
+    font-weight: 800 !important;
+}
+
+.header_container .menu_left a.current-page:hover {
+    color: #4A90A4 !important;
+    text-shadow: 0 3px 6px rgba(74, 144, 164, 0.3);
+}
+
+.header_container .menu_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_container .menu_right a {
+    color: #708090 !important;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.header_container .menu_right a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #50C878 0%, #4A90A4 100%);
+    transition: left 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    z-index: -1;
+    border-radius: 12px;
+}
+
+.header_container .menu_right a:hover::before {
+    left: 0;
+}
+
+.header_container .menu_right a:hover {
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(80, 200, 120, 0.3);
+    border-color: transparent;
+}
+
+/* Active page indicator in header */
+.header_container .menu_right a.active {
+    background: linear-gradient(135deg, #50C878 0%, #4A90A4 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
+    border-color: transparent !important;
+}
+
+.header_container .menu_right a.active::before {
+    left: 0;
+}
+
+.header_container .menu_right a.active:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(80, 200, 120, 0.4);
+}
+
+/* Subtle underline indicator for current page (alternative style) */
+.header_container .menu_right a.current-page-subtle {
+    position: relative;
+}
+
+.header_container .menu_right a.current-page-subtle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #50C878 0%, #4A90A4 100%);
+    border-radius: 1px;
+    opacity: 0.8;
+}
+
+.header_container .menu_right a.current-page-subtle:hover::after {
+    opacity: 1;
+    height: 3px;
+    bottom: -9px;
+}
+
+.header_container .menu_right a.current-page {
+    border-bottom: 3px solid #50C878 !important;
+    background: rgba(80, 200, 120, 0.1) !important;
+    color: #50C878 !important;
+    font-weight: 600 !important;
+}
+
+.header_container .menu_right a.current-page:hover {
+    background: rgba(80, 200, 120, 0.15) !important;
+    transform: translateY(-1px);
+}
+
+/* Ensure header stays consistent across all pages */
+.header_container * {
+    box-sizing: border-box;
+}
+
+/* Prevent inheritance issues on academic page */
+.academic-container ~ .header_container,
+.academic-section ~ .header_container {
+    /* Reset any inherited styles */
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+}
+
+/* Make sure header links don't inherit academic page styles */
+.header_container a {
+    text-decoration: none !important;
+    border: none !important;
+    background-image: none !important;
+}
+
+.header_container .menu_right a {
+    margin: 0 !important;
+}
+
+/* Language selector in the header */
+.language-selector {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.language-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(80, 200, 120, 0.3);
+    border-radius: 25px;
+    padding: 8px 16px;
+    color: #50C878;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    outline: none;
+}
+
+.language-select:hover {
+    background: rgba(80, 200, 120, 0.1);
+    border-color: #50C878;
+    transform: translateY(-2px);
+}
+
+.language-select:focus {
+    border-color: #4A90A4;
+    box-shadow: 0 0 0 3px rgba(74, 144, 164, 0.2);
+}
+
+.language-select option {
+    background: #ffffff;
+    color: #333;
+    padding: 8px;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .header_container {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .header_container .menu_left {
+        text-align: center;
+    }
+
+    .header_container .menu_right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header_container .menu_right a {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+.language-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #2d5a3d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.language-dropdown a:hover {
+    background: rgba(45, 90, 61, 0.1);
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

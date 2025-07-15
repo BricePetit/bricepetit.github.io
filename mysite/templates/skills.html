@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang='{{ LANGUAGE_CODE }}'>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+        <title>{{title}}</title>
+        {% include 'header.html'%}
+    </head>
+    <body>
+        <!-- Hero Section for Skills Page -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-icon">💻</div>
+                <h1 class="page-title">{% trans "Skills & Projects" %}</h1>
+                <p class="page-subtitle">{% trans "Technical Expertise & Innovation" %}</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </section>
+        <div class="skills-container">
+            <!-- Skills Level Explanation Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">📋 {% trans "Skills Level Scale" %}</h2>
+                <p class="explanation-intro">{% trans "Technical skill levels are evaluated based on practical experience and complexity of completed projects:" %}</p>
+                <div class="level-grid">
+                    <div class="level-item">
+                        <span class="level-badge level-expert">{% trans "Expert" %}</span>
+                        <p class="level-desc">{% trans "5+ years of experience, advanced research projects, innovation and community contribution" %}</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-avance">{% trans "Advanced" %}</span>
+                        <p class="level-desc">{% trans "2-5 years of experience, complex professional projects, deep mastery" %}</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-intermediaire">{% trans "Intermediate" %}</span>
+                        <p class="level-desc">{% trans "1-2 years of experience, academic/personal projects, good understanding" %}</p>
+                    </div>
+                    <div class="level-item">
+                        <span class="level-badge level-debutant">{% trans "Beginner" %}</span>
+                        <p class="level-desc">{% trans "Less than 1 year, recent learning, basic knowledge" %}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Programming Languages Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">⌨️ {% trans "Programming Languages" %}</h2>
+                <div class="skills-grid">
+                    {% for lang, details in programming_languages.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ lang }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- ML/DL Frameworks Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🤖 {% trans "ML/DL Frameworks" %}</h2>
+                <div class="skills-grid">
+                    {% for framework, details in ml_frameworks.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ framework }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Data Science Tools Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">📊 {% trans "Data Science Tools" %}</h2>
+                <div class="skills-grid">
+                    {% for tool, details in data_tools.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ tool }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Databases Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🗄️ {% trans "Databases" %}</h2>
+                <div class="skills-grid">
+                    {% for db, details in databases.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ db }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- DevOps & Tools Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🛠️ {% trans "DevOps & Tools" %}</h2>
+                <div class="skills-grid">
+                    {% for tool, details in devops_tools.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ tool }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Expertise Domains Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">⚡ {% trans "Expertise Domains" %}</h2>
+                <div class="skills-grid">
+                    {% for domain, details in expertise_domains.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ domain }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Languages Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🌍 {% trans "Languages" %}</h2>
+                <div class="skills-grid">
+                    {% for language, details in languages.items %}
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>{{ language }}</h3>
+                            <span class="skill-level level-{{ details.level|lower }}">{{ details.level }}</span>
+                        </div>
+                        <p class="skill-description">{{ details.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Featured Projects Section -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🚀 {% trans "Featured Projects" %}</h2>
+                <div class="projects-grid">
+                    {% for project in featured_projects %}
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a></h3>
+                        </div>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-tech">
+                            {% for tech in project.tech %}
+                            <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript for scroll animations -->
+        <script>
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        if (entry.target.classList.contains('enhanced-card')) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, 100);
+                        }
+                    }
+                });
+            }, observerOptions);
+            // Observe all fade-in elements.
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.enhanced-card').forEach(el => observer.observe(el));
+            // Smooth scroll for scroll indicator
+            document.querySelector('.scroll-indicator').addEventListener('click', () => {
+                document.querySelector('.skills-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        <!-- Global script animations -->
+        <script src="{% static 'js/animations.js' %}"></script>
+    </body>
+    <footer>
+        {% include 'footer.html'%}
+    </footer>
+</html>

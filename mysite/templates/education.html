@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang='{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}'>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+        <title>{{title}}</title>
+        {% include 'header.html'%}
+    </head>
+    <body>
+        <!-- Hero Section for Education Page -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-icon">📚</div>
+                <h1 class="page-title">{% trans "Education & Experience" %}</h1>
+                <p class="page-subtitle">{% trans "Professional Journey & Academic Background" %}</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </section>
+        <div class="experience-container">
+            <!-- Section Work Experience -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">💼 {% trans "Work Experience" %}</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    {% for experience in work_experiences %}
+                    <div class="timeline-item {% if experience.is_current %}current{% endif %}">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot {% if experience.is_current %}active{% endif %}"></div>
+                            <div class="timeline-date">
+                                <span class="period">{{ experience.period }}</span>
+                                <span class="duration">{{ experience.duration }}</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <h3 class="job-title">{{ experience.job_title }}</h3>
+                                <div class="company-info">
+                                    <span class="company">{{ experience.company }}</span>
+                                    <span class="location">📍 {{ experience.location }}</span>
+                                    <span class="contract-type">{{ experience.contract_type }}</span>
+                                </div>
+                                {% if experience.context %}
+                                <p class="context">{{ experience.context }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="experience-details">
+                                <div class="responsibilities">
+                                    <h4>🎯 {% trans "Responsibilities" %}</h4>
+                                    <ul>
+                                        {% for responsibility in experience.responsibilities %}
+                                        <li>{{ responsibility }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% if experience.achievements %}
+                                <div class="achievements">
+                                    <h4>🏆 {% trans "Achievements" %}</h4>
+                                    <ul>
+                                        {% for achievement in experience.achievements %}
+                                        <li>{{ achievement }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+                                {% if experience.technologies %}
+                                <div class="technologies">
+                                    <h4>🔧 {% trans "Technologies" %}</h4>
+                                    <div class="tech-tags">
+                                        {% for tech in experience.technologies %}
+                                        <span class="tech-tag">{{ tech }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Section Education -->
+            <div class="enhanced-card fade-in">
+                <h2 class="card-title">🎓 {% trans "Academic Education" %}</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    {% for education in education_timeline %}
+                    <div class="timeline-item {% if education.is_current %}current{% endif %}">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot {% if education.is_current %}active{% endif %}"></div>
+                            <div class="timeline-date">
+                                <span class="period">{{ education.period }}</span>
+                                <span class="duration">{{ education.duration }}</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="education-header">
+                                <h3 class="degree-title">{{ education.degree }}</h3>
+                                <div class="institution-info">
+                                    <span class="institution">{{ education.institution }}</span>
+                                    <span class="location">📍 {{ education.location }}</span>
+                                    <span class="specialization">{{ education.specialization }}</span>
+                                </div>
+                                {% if education.collaboration %}
+                                <p class="collaboration">{{ education.collaboration }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="education-details">
+                                <div class="focus-areas">
+                                    <h4>📚 {% trans "Study Areas" %}</h4>
+                                    <ul>
+                                        {% for area in education.focus_areas %}
+                                        <li>{{ area }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="status">
+                                    <h4>📋 {% trans "Status" %}</h4>
+                                    <span class="status-badge {% if education.is_current %}current{% endif %}">{{ education.status }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript for scroll animations -->
+        <script>
+            // Scroll animations.
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        if (entry.target.classList.contains('enhanced-card')) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, 100);
+                        }
+                    }
+                });
+            }, observerOptions);
+            // Observe all fade-in elements.
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.enhanced-card').forEach(el => observer.observe(el));
+            // Smooth scroll for scroll indicator.
+            document.querySelector('.scroll-indicator').addEventListener('click', () => {
+                document.querySelector('.experience-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        <!-- Global script animations -->
+        <script src="{% static 'js/animations.js' %}"></script>
+    </body>
+    <footer>
+        {% include 'footer.html'%}
+    </footer>
+</html>

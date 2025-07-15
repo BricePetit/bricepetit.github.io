@@ -1,0 +1,1078 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-14 15:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: mysite/templates/academic.html:17
+msgid "Academic Profile"
+msgstr "Academic Profile"
+
+#: mysite/templates/academic.html:18
+msgid "Publications & Teaching Experience"
+msgstr "Publications & Teaching Experience"
+
+#: mysite/templates/academic.html:31
+msgid "Publications"
+msgstr "Publications"
+
+#: mysite/templates/academic.html:44
+msgid "Teaching Experience"
+msgstr "Teaching Experience"
+
+#: mysite/templates/education.html:17
+msgid "Education & Experience"
+msgstr "Education & Experience"
+
+#: mysite/templates/education.html:18
+msgid "Professional Journey & Academic Background"
+msgstr "Professional Journey & Academic Background"
+
+#: mysite/templates/education.html:32
+msgid "Work Experience"
+msgstr "Work Experience"
+
+#: mysite/templates/education.html:61
+msgid "Responsibilities"
+msgstr "Responsibilities"
+
+#: mysite/templates/education.html:71
+msgid "Achievements"
+msgstr "Achievements"
+
+#: mysite/templates/education.html:82
+msgid "Technologies"
+msgstr "Technologies"
+
+#: mysite/templates/education.html:99
+msgid "Academic Education"
+msgstr "Academic Education"
+
+#: mysite/templates/education.html:128
+msgid "Study Areas"
+msgstr "Study Areas"
+
+#: mysite/templates/education.html:137
+msgid "Status"
+msgstr "Status"
+
+#: mysite/templates/footer.html:5
+msgid "Keep in Touch"
+msgstr "Keep in Touch"
+
+#: mysite/templates/footer.html:8
+msgid "Email"
+msgstr "Email"
+
+#: mysite/templates/footer.html:28
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: mysite/templates/header.html:7
+msgid "Skills"
+msgstr "Skills"
+
+#: mysite/templates/header.html:8
+msgid "Academic"
+msgstr "Academic"
+
+#: mysite/templates/header.html:9
+msgid "Education & Work Experience"
+msgstr "Education & Work Experience"
+
+#: mysite/templates/home.html:18
+msgid "Photo de Brice Petit"
+msgstr "Photo of Brice Petit"
+
+#: mysite/templates/home.html:19
+msgid "PhD Student"
+msgstr "PhD Student"
+
+#: mysite/templates/home.html:24
+msgid "PhD Student in AI & Energy Forecasting"
+msgstr "PhD Student in AI & Energy Forecasting"
+
+#: mysite/templates/home.html:32
+msgid "Contact Me"
+msgstr "Contact Me"
+
+#: mysite/templates/home.html:39
+msgid "View Research"
+msgstr "View Research"
+
+#: mysite/templates/home.html:46 mysite/templates/skills.html:17
+msgid "Skills & Projects"
+msgstr "Skills & Projects"
+
+#: mysite/templates/home.html:63
+#, fuzzy
+#| msgid "4 years"
+msgid "Years"
+msgstr "4 years"
+
+#: mysite/templates/home.html:64
+#, fuzzy
+#| msgid "Teaching Experience"
+msgid "PhD Research Experience"
+msgstr "Teaching Experience"
+
+#: mysite/templates/home.html:68
+msgid "Households"
+msgstr "Households"
+
+#: mysite/templates/home.html:69
+#, fuzzy
+#| msgid "Energy Data"
+msgid "Energy Data Analyzed"
+msgstr "Energy Data"
+
+#: mysite/templates/home.html:73
+msgid "Focus"
+msgstr "Focus"
+
+#: mysite/templates/home.html:74
+#, fuzzy
+#| msgid "Machine Learning & Deep Learning"
+msgid "Machine Learning & Forecasting"
+msgstr "Machine Learning & Deep Learning"
+
+#: mysite/templates/home.html:78
+msgid "University"
+msgstr "University"
+
+#: mysite/templates/home.html:79
+msgid "IRIDIA Research Lab"
+msgstr "IRIDIA Research Lab"
+
+#: mysite/templates/home.html:88
+msgid "About My Research"
+msgstr "About My Research"
+
+#: mysite/templates/home.html:90
+#, fuzzy
+#| msgid ""
+#| "I am a PhD student at the Institut de Recherches Interdisciplinaires et "
+#| "de Développements en Intelligence Artificielle (IRIDIA) at the École "
+#| "Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold "
+#| "a Master's degree in Computer Science from the Université Libre de "
+#| "Bruxelles. During my studies, I focused on artificial intelligence, "
+#| "algorithms, and mathematics."
+msgid ""
+"I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
+"Développements en Intelligence Artificielle (IRIDIA) at the École "
+"Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold a "
+"Master\\"
+msgstr ""
+"I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
+"Développements en Intelligence Artificielle (IRIDIA) at the École "
+"Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold a "
+"Master's degree in Computer Science from the Université Libre de Bruxelles. "
+"During my studies, I focused on artificial intelligence, algorithms, and "
+"mathematics."
+
+#: mysite/templates/home.html:92
+msgid ""
+"I am interested in various fields, including deep learning, machine "
+"learning, reinforcement learning, and big data. In addition to these "
+"technical interests, I am also deeply concerned with important global "
+"challenges such as climate change, energy, health, and well-being."
+msgstr ""
+"I am interested in various fields, including deep learning, machine "
+"learning, reinforcement learning, and big data. In addition to these "
+"technical interests, I am also deeply concerned with important global "
+"challenges such as climate change, energy, health, and well-being."
+
+#: mysite/templates/home.html:94
+msgid ""
+"My PhD research focuses on electricity forecasting. Initially, we studied "
+"<i>Voisins d\\"
+msgstr ""
+
+#: mysite/templates/home.html:96
+msgid ""
+"Subsequently, in collaboration with AIEG — a network operator — we explored "
+"electricity forecasting (both consumption and production) to address the "
+"challenge of ensuring that production does not exceed network losses. "
+"Finally, we will investigate the development of an intelligent distribution "
+"key for energy sharing."
+msgstr ""
+"Subsequently, in collaboration with AIEG — a network operator — we explored "
+"electricity forecasting (both consumption and production) to address the "
+"challenge of ensuring that production does not exceed network losses. "
+"Finally, we will investigate the development of an intelligent distribution "
+"key for energy sharing."
+
+#: mysite/templates/home.html:106
+msgid "Research Topics"
+msgstr "Research Topics"
+
+#: mysite/templates/home.html:108
+msgid "Artificial Intelligence & Machine Learning"
+msgstr "Artificial Intelligence & Machine Learning"
+
+#: mysite/templates/home.html:109
+msgid "Time Series Forecasting & Prediction"
+msgstr "Time Series Forecasting & Prediction"
+
+#: mysite/templates/home.html:110
+msgid "Big Data Analytics & Processing"
+msgstr "Big Data Analytics & Processing"
+
+#: mysite/templates/home.html:111
+msgid "Energy Sharing & Smart Grids"
+msgstr "Energy Sharing & Smart Grids"
+
+#: mysite/templates/home.html:112
+msgid "Energy Communities & Sustainability"
+msgstr "Energy Communities & Sustainability"
+
+#: mysite/templates/home.html:113
+msgid "Deep Learning & Neural Networks"
+msgstr "Deep Learning & Neural Networks"
+
+#: mysite/templates/home.html:119
+msgid "Where to Find Me"
+msgstr "Where to Find Me"
+
+#: mysite/templates/home.html:137
+msgid "Office:"
+msgstr "Office:"
+
+#: mysite/templates/skills.html:18
+msgid "Technical Expertise & Innovation"
+msgstr "Technical Expertise & Innovation"
+
+#: mysite/templates/skills.html:30
+msgid "Skills Level Scale"
+msgstr "Skills Level Scale"
+
+#: mysite/templates/skills.html:31
+msgid ""
+"Technical skill levels are evaluated based on practical experience and "
+"complexity of completed projects:"
+msgstr ""
+
+#: mysite/templates/skills.html:34
+msgid "Expert"
+msgstr "Expert"
+
+#: mysite/templates/skills.html:35
+msgid ""
+"5+ years of experience, advanced research projects, innovation and community "
+"contribution"
+msgstr ""
+
+#: mysite/templates/skills.html:38 mysite/views.py:27 mysite/views.py:36
+#: mysite/views.py:37 mysite/views.py:38 mysite/views.py:39 mysite/views.py:44
+#: mysite/views.py:45 mysite/views.py:46 mysite/views.py:47 mysite/views.py:48
+#: mysite/views.py:55 mysite/views.py:61 mysite/views.py:66 mysite/views.py:67
+#: mysite/views.py:68 mysite/views.py:69 mysite/views.py:70
+msgid "Advanced"
+msgstr "Advanced"
+
+#: mysite/templates/skills.html:39
+msgid "2-5 years of experience, complex professional projects, deep mastery"
+msgstr ""
+
+#: mysite/templates/skills.html:42 mysite/views.py:28 mysite/views.py:29
+#: mysite/views.py:30 mysite/views.py:49 mysite/views.py:54 mysite/views.py:60
+#: mysite/views.py:135
+msgid "Intermediate"
+msgstr "Intermediate"
+
+#: mysite/templates/skills.html:43 mysite/views.py:135
+msgid "1-2 years of experience, academic/personal projects, good understanding"
+msgstr "1-2 years of experience, academic/personal projects, good understanding"
+
+#: mysite/templates/skills.html:46 mysite/views.py:31 mysite/views.py:136
+msgid "Beginner"
+msgstr "Beginner"
+
+#: mysite/templates/skills.html:47 mysite/views.py:136
+msgid "Less than 1 year, recent learning, basic knowledge"
+msgstr "Less than 1 year, recent learning, basic knowledge"
+
+#: mysite/templates/skills.html:53
+msgid "Programming Languages"
+msgstr "Programming Languages"
+
+#: mysite/templates/skills.html:69
+msgid "ML/DL Frameworks"
+msgstr "ML/DL Frameworks"
+
+#: mysite/templates/skills.html:85
+msgid "Data Science Tools"
+msgstr "Data Science Tools"
+
+#: mysite/templates/skills.html:101
+msgid "Databases"
+msgstr ""
+
+#: mysite/templates/skills.html:116
+msgid "DevOps & Tools"
+msgstr "DevOps & Tools"
+
+#: mysite/templates/skills.html:131
+msgid "Expertise Domains"
+msgstr "Expertise Domains"
+
+#: mysite/templates/skills.html:146
+msgid "Languages"
+msgstr "Languages"
+
+#: mysite/templates/skills.html:161
+msgid "Featured Projects"
+msgstr "Featured Projects"
+
+#: mysite/views.py:18
+msgid "Brice Petit - Home page"
+msgstr "Brice Petit - Home page"
+
+#: mysite/views.py:19
+msgid "Welcome to the home page."
+msgstr "Welcome to the home page."
+
+#: mysite/views.py:27
+msgid "Python"
+msgstr "Python"
+
+#: mysite/views.py:27
+msgid "Main language for ML/DL, data science and web development"
+msgstr "Main language for ML/DL, data science and web development"
+
+#: mysite/views.py:28
+msgid "C++"
+msgstr "C++"
+
+#: mysite/views.py:28
+msgid "Code optimization and climate simulation"
+msgstr "Code optimization and climate simulation"
+
+#: mysite/views.py:29
+msgid "Java"
+msgstr "Java"
+
+#: mysite/views.py:29
+msgid "Object-oriented development and enterprise applications"
+msgstr "Object-oriented development and enterprise applications"
+
+#: mysite/views.py:30
+msgid "R"
+msgstr "R"
+
+#: mysite/views.py:30
+msgid "Statistical analysis and data science"
+msgstr "Statistical analysis and data science"
+
+#: mysite/views.py:31
+msgid "Fortran"
+msgstr "Fortran"
+
+#: mysite/views.py:31
+msgid "Legacy code and scientific simulations"
+msgstr "Legacy code and scientific simulations"
+
+#: mysite/views.py:36
+msgid "TensorFlow"
+msgstr "TensorFlow"
+
+#: mysite/views.py:36
+#, fuzzy
+#| msgid "Deep Learning & Neural Networks"
+msgid "Deep learning and neural networks"
+msgstr "Deep Learning & Neural Networks"
+
+#: mysite/views.py:37
+msgid "PyTorch"
+msgstr "PyTorch"
+
+#: mysite/views.py:37
+msgid "Deep learning research and prototyping"
+msgstr "Deep learning research and prototyping"
+
+#: mysite/views.py:38
+msgid "Scikit-learn"
+msgstr "Scikit-learn"
+
+#: mysite/views.py:38
+msgid "Classical machine learning and preprocessing"
+msgstr "Classical machine learning and preprocessing"
+
+#: mysite/views.py:39
+msgid "XGBoost"
+msgstr "XGBoost"
+
+#: mysite/views.py:39
+msgid "Gradient boosting for time series and prediction"
+msgstr "Gradient boosting for time series and prediction"
+
+#: mysite/views.py:44
+msgid "Jupyter"
+msgstr "Jupyter"
+
+#: mysite/views.py:44
+msgid "Interactive development and prototyping"
+msgstr "Interactive development and prototyping"
+
+#: mysite/views.py:45
+msgid "Pandas"
+msgstr "Pandas"
+
+#: mysite/views.py:45
+msgid "Data manipulation and analysis"
+msgstr "Data manipulation and analysis"
+
+#: mysite/views.py:46
+msgid "NumPy"
+msgstr "NumPy"
+
+#: mysite/views.py:46
+msgid "Numerical computing and linear algebra"
+msgstr "Numerical computing and linear algebra"
+
+#: mysite/views.py:47
+msgid "Matplotlib"
+msgstr "Matplotlib"
+
+#: mysite/views.py:47
+msgid "Static data visualization"
+msgstr "Static data visualization"
+
+#: mysite/views.py:48
+msgid "Seaborn"
+msgstr "Seaborn"
+
+#: mysite/views.py:48
+msgid "Statistical visualization"
+msgstr "Statistical visualization"
+
+#: mysite/views.py:49
+msgid "Plotly"
+msgstr "Plotly"
+
+#: mysite/views.py:49
+msgid "Interactive visualizations"
+msgstr "Interactive visualizations"
+
+#: mysite/views.py:54
+msgid "MySQL"
+msgstr "MySQL"
+
+#: mysite/views.py:54
+msgid "Relational database"
+msgstr "Relational database"
+
+#: mysite/views.py:55
+msgid "Cassandra"
+msgstr "Cassandra"
+
+#: mysite/views.py:55
+msgid "NoSQL for big data and IoT"
+msgstr "NoSQL for big data and IoT"
+
+#: mysite/views.py:60
+msgid "Docker"
+msgstr "Docker"
+
+#: mysite/views.py:60
+msgid "Containerization and deployment"
+msgstr "Containerization and deployment"
+
+#: mysite/views.py:61
+msgid "Git"
+msgstr "Git"
+
+#: mysite/views.py:61
+msgid "Version control and collaboration"
+msgstr "Version control and collaboration"
+
+#: mysite/views.py:66
+msgid "Supervised Machine Learning"
+msgstr "Supervised Machine Learning"
+
+#: mysite/views.py:66
+msgid "Classification, regression, optimization"
+msgstr "Classification, regression, optimization"
+
+#: mysite/views.py:67
+msgid "Time Series Analysis"
+msgstr "Time Series Analysis"
+
+#: mysite/views.py:67
+msgid "Time analysis techniques, trend and seasonality detection"
+msgstr "Time analysis techniques, trend and seasonality detection"
+
+#: mysite/views.py:68
+#, fuzzy
+#| msgid "PhD Student in AI & Energy Forecasting"
+msgid "Energy Forecasting"
+msgstr "PhD Student in AI & Energy Forecasting"
+
+#: mysite/views.py:68
+msgid "Energy consumption and production prediction in business context"
+msgstr "Energy consumption and production prediction in business context"
+
+#: mysite/views.py:69
+#, fuzzy
+#| msgid "Energy Communities & Sustainability"
+msgid "Energy Communities"
+msgstr "Energy Communities & Sustainability"
+
+#: mysite/views.py:69
+msgid "Distribution keys, community optimization"
+msgstr "Distribution keys, community optimization"
+
+#: mysite/views.py:70
+msgid "Energy Optimization"
+msgstr "Energy Optimization"
+
+#: mysite/views.py:70
+msgid "Production vs consumption, smart grids"
+msgstr "Production vs consumption, smart grids"
+
+#: mysite/views.py:75
+msgid "French"
+msgstr "French"
+
+#: mysite/views.py:75 mysite/views.py:137
+msgid "Native"
+msgstr "Native"
+
+#: mysite/views.py:75 mysite/views.py:137
+msgid "Mother tongue"
+msgstr "Mother tongue"
+
+#: mysite/views.py:76
+msgid "English"
+msgstr "English"
+
+#: mysite/views.py:76 mysite/views.py:138
+msgid "C1"
+msgstr "C1"
+
+#: mysite/views.py:76
+msgid "Professional and academic"
+msgstr "Professional and academic"
+
+#: mysite/views.py:77
+msgid "Dutch"
+msgstr "Dutch"
+
+#: mysite/views.py:77 mysite/views.py:139
+msgid "B1"
+msgstr "B1"
+
+#: mysite/views.py:77
+msgid "Conversational"
+msgstr "Conversational"
+
+#: mysite/views.py:85
+msgid "Data parser for Renewgy company"
+msgstr "Data parser for Renewgy company"
+
+#: mysite/views.py:86
+#, fuzzy
+#| msgid "Big Data Analytics & Processing"
+msgid "Data Processing"
+msgstr "Big Data Analytics & Processing"
+
+#: mysite/views.py:91
+msgid "Data collection via smart meters with Raspberry Pi and Cassandra"
+msgstr "Data collection via smart meters with Raspberry Pi and Cassandra"
+
+#: mysite/views.py:97
+msgid "Energy consumption and production prediction"
+msgstr "Energy consumption and production prediction"
+
+#: mysite/views.py:98
+msgid "Time Series"
+msgstr "Time Series"
+
+#: mysite/views.py:103
+msgid "Web interface for energy communities"
+msgstr "Web interface for energy communities"
+
+#: mysite/views.py:104
+msgid "Web Development"
+msgstr "Web Development"
+
+#: mysite/views.py:104
+msgid "Data Visualization"
+msgstr "Data Visualization"
+
+#: mysite/views.py:109
+msgid ""
+"Research on electrical data disaggregation (abandoned due to funding issues)"
+msgstr ""
+
+#: mysite/views.py:110
+msgid "Machine Learning"
+msgstr "Machine Learning"
+
+#: mysite/views.py:110
+#, fuzzy
+#| msgid "Big Data Analytics & Processing"
+msgid "Signal Processing"
+msgstr "Big Data Analytics & Processing"
+
+#: mysite/views.py:113
+msgid "Voisin d'Énergie Database"
+msgstr "Voisin d'Énergie Database"
+
+#: mysite/views.py:115
+msgid "Cassandra database for the Voisins d'Énergie project"
+msgstr "Cassandra database for the Voisins d'Énergie project"
+
+#: mysite/views.py:116
+msgid "Database Design"
+msgstr "Database Design"
+
+#: mysite/views.py:116
+msgid "Energy Data"
+msgstr "Energy Data"
+
+#: mysite/views.py:121
+msgid ""
+"Conversion of a Fortran climate model to Python and C++ (procedural and "
+"object-oriented)"
+msgstr ""
+
+#: mysite/views.py:122
+msgid "Climate Modeling"
+msgstr "Climate Modeling"
+
+#: mysite/views.py:125
+msgid "Smart Waste Classification"
+msgstr "Smart Waste Classification"
+
+#: mysite/views.py:127
+msgid "Smart waste bins with automatic waste classification using AI"
+msgstr "Smart waste bins with automatic waste classification using AI"
+
+#: mysite/views.py:128
+msgid "Computer Vision"
+msgstr "Computer Vision"
+
+#: mysite/views.py:134
+msgid "Expert/Advanced"
+msgstr "Expert/Advanced"
+
+#: mysite/views.py:134
+msgid ""
+"More than 2 years of experience, complex professional projects, deep mastery"
+msgstr ""
+
+#: mysite/views.py:138
+msgid "Professional and academic level"
+msgstr "Professional and academic level"
+
+#: mysite/views.py:139
+msgid "Conversational level"
+msgstr "Conversational level"
+
+#: mysite/views.py:146
+#, fuzzy
+#| msgid "Brice Petit - Home page"
+msgid "Brice Petit - Skills & Expertise"
+msgstr "Brice Petit - Home page"
+
+#: mysite/views.py:162
+msgid "TODO"
+msgstr "TODO"
+
+#: mysite/views.py:162
+msgid "PAPER TYPE"
+msgstr "PAPER TYPE"
+
+#: mysite/views.py:165
+msgid "Université Libre de Bruxelles - INFO-H402 - Computing project"
+msgstr "Université Libre de Bruxelles - INFO-H402 - Computing project"
+
+#: mysite/views.py:165 mysite/views.py:166 mysite/views.py:167
+msgid "Project"
+msgstr "Project"
+
+#: mysite/views.py:166
+msgid "Université Libre de Bruxelles - INFO-S2001 - Informatique"
+msgstr "Université Libre de Bruxelles - INFO-S2001 - Computer Science"
+
+#: mysite/views.py:167
+msgid ""
+"Université Libre de Bruxelles - TRAN-H201 - Projet multidisciplinaire II et "
+"gestion de projet"
+msgstr ""
+
+#: mysite/views.py:173
+#, fuzzy
+#| msgid "Brice Petit - Home page"
+msgid "Brice Petit - Academic Profile"
+msgstr "Brice Petit - Home page"
+
+#: mysite/views.py:174
+#, fuzzy
+#| msgid "Welcome to the home page."
+msgid "Welcome to the academic page."
+msgstr "Welcome to the home page."
+
+#: mysite/views.py:185 mysite/views.py:275
+msgid "2022 - Present"
+msgstr "2022 - Present"
+
+#: mysite/views.py:186 mysite/views.py:276
+msgid "3+ years"
+msgstr "3+ years"
+
+#: mysite/views.py:187
+msgid "PhD Student & Research Assistant"
+msgstr "PhD Student & Research Assistant"
+
+#: mysite/views.py:189 mysite/views.py:212 mysite/views.py:233
+#: mysite/views.py:279 mysite/views.py:296 mysite/views.py:313
+msgid "Brussels, Belgium"
+msgstr "Brussels, Belgium"
+
+#: mysite/views.py:190
+msgid "Full-time"
+msgstr "Full-time"
+
+#: mysite/views.py:191
+msgid "FARI & AIEG Collaboration"
+msgstr "FARI & AIEG Collaboration"
+
+#: mysite/views.py:193
+#, fuzzy
+#| msgid "Artificial Intelligence & Machine Learning"
+msgid "Research in artificial intelligence applied to energy"
+msgstr "Artificial Intelligence & Machine Learning"
+
+#: mysite/views.py:194
+msgid "Teaching assistant in computer science"
+msgstr "Teaching assistant in computer science"
+
+#: mysite/views.py:195
+msgid "Development of machine learning algorithms"
+msgstr "Development of machine learning algorithms"
+
+#: mysite/views.py:196
+msgid "Student supervision and research projects"
+msgstr "Student supervision and research projects"
+
+#: mysite/views.py:199
+msgid "Development of energy prediction models (XGBoost, CNN, LSTM)"
+msgstr "Development of energy prediction models (XGBoost, CNN, LSTM)"
+
+#: mysite/views.py:200
+msgid "Data collection from 100+ households via IoT"
+msgstr "Data collection from 100+ households via IoT"
+
+#: mysite/views.py:201
+msgid "Creation of NoSQL database (Cassandra) for big data"
+msgstr "Creation of NoSQL database (Cassandra) for big data"
+
+#: mysite/views.py:202
+msgid "Django web interface for energy data visualization"
+msgstr "Django web interface for energy data visualization"
+
+#: mysite/views.py:209
+msgid "1 year"
+msgstr "1 year"
+
+#: mysite/views.py:210
+msgid "Server"
+msgstr "Server"
+
+#: mysite/views.py:213 mysite/views.py:234 mysite/views.py:255
+#, fuzzy
+#| msgid "PhD Student"
+msgid "Student job"
+msgstr "PhD Student"
+
+#: mysite/views.py:214
+msgid "Customer service in specialized beer bar"
+msgstr "Customer service in specialized beer bar"
+
+#: mysite/views.py:216
+msgid "Customer service in French, English, Dutch"
+msgstr "Customer service in French, English, Dutch"
+
+#: mysite/views.py:217
+msgid "Craft beer consulting"
+msgstr "Craft beer consulting"
+
+#: mysite/views.py:218
+msgid "Cash register and order management"
+msgstr "Cash register and order management"
+
+#: mysite/views.py:221
+msgid "Development of language skills"
+msgstr "Development of language skills"
+
+#: mysite/views.py:222
+msgid "Excellence in customer service"
+msgstr "Excellence in customer service"
+
+#: mysite/views.py:223
+msgid "Stress management in dynamic environment"
+msgstr "Stress management in dynamic environment"
+
+#: mysite/views.py:230 mysite/views.py:310
+msgid "4 years"
+msgstr "4 years"
+
+#: mysite/views.py:231
+msgid "Crew Member"
+msgstr "Crew Member"
+
+#: mysite/views.py:235
+msgid "Fast food during studies"
+msgstr "Fast food during studies"
+
+#: mysite/views.py:237
+msgid "Multilingual customer service"
+msgstr "Multilingual customer service"
+
+#: mysite/views.py:238
+msgid "Order preparation"
+msgstr "Order preparation"
+
+#: mysite/views.py:239
+msgid "Teamwork under pressure"
+msgstr "Teamwork under pressure"
+
+#: mysite/views.py:242
+msgid "Flexibility and adaptation"
+msgstr "Flexibility and adaptation"
+
+#: mysite/views.py:243
+msgid "Time management skills"
+msgstr "Time management skills"
+
+#: mysite/views.py:244
+msgid "Team spirit development"
+msgstr "Team spirit development"
+
+#: mysite/views.py:251
+msgid "3 years"
+msgstr "3 years"
+
+#: mysite/views.py:252
+msgid "Assistant"
+msgstr "Assistant"
+
+#: mysite/views.py:254
+msgid "Machelen, Belgium"
+msgstr "Machelen, Belgium"
+
+#: mysite/views.py:256
+msgid "Intellectual property firm"
+msgstr "Intellectual property firm"
+
+#: mysite/views.py:258
+msgid "Administrative support"
+msgstr "Administrative support"
+
+#: mysite/views.py:259
+msgid "Document filing"
+msgstr "Document filing"
+
+#: mysite/views.py:260
+msgid "Team assistance"
+msgstr "Team assistance"
+
+#: mysite/views.py:263
+msgid "Introduction to professional world"
+msgstr "Introduction to professional world"
+
+#: mysite/views.py:264
+msgid "Rigor and organization"
+msgstr "Rigor and organization"
+
+#: mysite/views.py:265
+msgid "First contact with corporate environment"
+msgstr "First contact with corporate environment"
+
+#: mysite/views.py:277
+msgid "PhD in Engineering Sciences"
+msgstr "PhD in Engineering Sciences"
+
+#: mysite/views.py:280
+#, fuzzy
+#| msgid "Artificial Intelligence & Machine Learning"
+msgid "Artificial Intelligence & Energy"
+msgstr "Artificial Intelligence & Machine Learning"
+
+#: mysite/views.py:281
+msgid "FARI & AIEG"
+msgstr "FARI & AIEG"
+
+#: mysite/views.py:283
+msgid "Machine Learning applied to energy"
+msgstr "Machine Learning applied to energy"
+
+#: mysite/views.py:284
+msgid "Electrical consumption prediction"
+msgstr "Electrical consumption prediction"
+
+#: mysite/views.py:285
+msgid "Energy community optimization"
+msgstr "Energy community optimization"
+
+#: mysite/views.py:286
+msgid "Time series analysis"
+msgstr "Time series analysis"
+
+#: mysite/views.py:288
+msgid "In progress"
+msgstr "In progress"
+
+#: mysite/views.py:293
+msgid "2 years"
+msgstr "2 years"
+
+#: mysite/views.py:294
+msgid "Master in Computer Science"
+msgstr "Master in Computer Science"
+
+#: mysite/views.py:295 mysite/views.py:312
+msgid "Université Libre de Bruxelles"
+msgstr "Université Libre de Bruxelles"
+
+#: mysite/views.py:297
+#, fuzzy
+#| msgid "Artificial Intelligence & Machine Learning"
+msgid "Artificial Intelligence & embedded systems"
+msgstr "Artificial Intelligence & Machine Learning"
+
+#: mysite/views.py:300
+msgid "Machine Learning & Deep Learning"
+msgstr "Machine Learning & Deep Learning"
+
+#: mysite/views.py:301
+msgid "Advanced algorithms"
+msgstr "Advanced algorithms"
+
+#: mysite/views.py:302
+msgid "Distributed systems"
+msgstr "Distributed systems"
+
+#: mysite/views.py:303
+msgid "AI thesis project"
+msgstr "AI thesis project"
+
+#: mysite/views.py:305 mysite/views.py:322
+msgid "Graduated"
+msgstr "Graduated"
+
+#: mysite/views.py:311
+msgid "Bachelor in Computer Science"
+msgstr "Bachelor in Computer Science"
+
+#: mysite/views.py:314
+msgid "General Computer Science"
+msgstr "General Computer Science"
+
+#: mysite/views.py:317
+msgid "Programming (Java, C++, Python)"
+msgstr "Programming (Java, C++, Python)"
+
+#: mysite/views.py:318
+msgid "Applied mathematics"
+msgstr "Applied mathematics"
+
+#: mysite/views.py:319
+msgid "Data structures and algorithms"
+msgstr "Data structures and algorithms"
+
+#: mysite/views.py:320
+msgid "Databases and systems"
+msgstr "Databases and systems"
+
+#: mysite/views.py:331
+#, fuzzy
+#| msgid "Education & Work Experience"
+msgid "Brice Petit - Education & Experience"
+msgstr "Education & Work Experience"
+
+#~ msgid ""
+#~ "My PhD research focuses on electricity forecasting. Initially, we studied "
+#~ "<i>Voisins d'Énergie</i>, a co-created research project that evaluates "
+#~ "the flexibility of electricity demand at the level of energy communities. "
+#~ "To measure consumption and production in each household, we deployed a "
+#~ "comprehensive data collection system."
+#~ msgstr ""
+#~ "My PhD research focuses on electricity forecasting. Initially, we studied "
+#~ "<i>Voisins d'Énergie</i>, a co-created research project that evaluates "
+#~ "the flexibility of electricity demand at the level of energy communities. "
+#~ "To measure consumption and production in each household, we deployed a "
+#~ "comprehensive data collection system."
+
+# === 404 PAGE TRANSLATIONS ===
+
+#: mysite/templates/404.html:9 mysite/views.py:350
+msgid "Page Not Found"
+msgstr "Page Not Found"
+
+#: mysite/templates/404.html:20
+msgid "Sorry, the page you are looking for doesn't exist or has been moved."
+msgstr "Sorry, the page you are looking for doesn't exist or has been moved."
+
+#: mysite/templates/404.html:29
+msgid "Back to Home"
+msgstr "Back to Home"
+
+#: mysite/templates/404.html:38
+msgid "View Skills"
+msgstr "View Skills"
+
+#: mysite/templates/404.html:47
+msgid "Where would you like to go?"
+msgstr "Where would you like to go?"
+
+#: mysite/templates/404.html:53
+msgid "Home Page"
+msgstr "Home Page"
+
+#: mysite/templates/404.html:64
+msgid "Research & Academic"
+msgstr "Research & Academic"
+
+#: mysite/templates/404.html:81
+msgid "What happened?"
+msgstr "What happened?"
+
+#: mysite/templates/404.html:83
+msgid "The page URL might be incorrect"
+msgstr "The page URL might be incorrect"
+
+#: mysite/templates/404.html:84
+msgid "The page might have been moved or deleted"
+msgstr "The page might have been moved or deleted"
+
+#: mysite/templates/404.html:85
+msgid "You might have followed an outdated link"
+msgstr "You might have followed an outdated link"
+
+#: mysite/templates/404.html:86
+msgid "There might be a temporary server issue"
+msgstr "There might be a temporary server issue"
+
+#: mysite/templates/404.html:89
+msgid "If you believe this is an error, please feel free to contact me through the"
+msgstr "If you believe this is an error, please feel free to"
+
+#: mysite/templates/404.html:90
+msgid "contact form"
+msgstr "contact me"
