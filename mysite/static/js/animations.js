@@ -228,6 +228,24 @@ function translatePage(lang) {
     }
 }
 
+// Store user language preference
+function storeLanguagePreference(lang) {
+    try {
+        localStorage.setItem('preferredLanguage', lang);
+    } catch (e) {
+        // localStorage not available, ignore
+    }
+}
+
+function getStoredLanguagePreference() {
+    try {
+        return localStorage.getItem('preferredLanguage');
+    } catch (e) {
+        // localStorage not available, return null
+        return null;
+    }
+}
+
 // Enhanced language selector
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('language-select');
@@ -242,24 +260,28 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 1. Check the referrer URL (if user came from /en/ or /fr/ page)
             if (document.referrer) {
-                const referrerUrl = new URL(document.referrer);
-                if (referrerUrl.pathname.startsWith('/en/')) {
-                    detectedLang = 'en';
-                } else if (referrerUrl.pathname.startsWith('/fr/')) {
-                    detectedLang = 'fr';
+                try {
+                    const referrerUrl = new URL(document.referrer);
+                    if (referrerUrl.pathname.startsWith('/en/')) {
+                        detectedLang = 'en';
+                    } else if (referrerUrl.pathname.startsWith('/fr/')) {
+                        detectedLang = 'fr';
+                    }
+                } catch (e) {
+                    // Invalid referrer URL, ignore
                 }
             }
             
-            // 2. Check if the current 404 URL contains language hints
-            const currentUrl = window.location.href;
-            if (currentUrl.includes('/en/') || currentUrl.includes('%2Fen%2F')) {
-                detectedLang = 'en';
-            } else if (currentUrl.includes('/fr/') || currentUrl.includes('%2Ffr%2F')) {
-                detectedLang = 'fr';
+            // 2. Check stored language preference (from previous navigation)
+            if (detectedLang === 'fr' && !document.referrer) {
+                const storedLang = getStoredLanguagePreference();
+                if (storedLang && (storedLang === 'en' || storedLang === 'fr')) {
+                    detectedLang = storedLang;
+                }
             }
             
-            // 3. Fallback to browser language if no other hints
-            if (detectedLang === 'fr' && !document.referrer) {
+            // 3. Fallback to browser language if no other context
+            if (detectedLang === 'fr' && !document.referrer && !getStoredLanguagePreference()) {
                 const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
                 detectedLang = browserLang;
             }
@@ -270,11 +292,13 @@ document.addEventListener('DOMContentLoaded', function() {
             translatePage(currentLang);
             document.body.setAttribute('data-current-lang', currentLang);
         } else {
-            // For regular pages, detect from URL
+            // For regular pages, detect from URL and store preference
             if (currentPath.startsWith('/en/')) {
                 currentLang = 'en';
+                storeLanguagePreference('en');
             } else if (currentPath.startsWith('/fr/')) {
                 currentLang = 'fr';
+                storeLanguagePreference('fr');
             }
         }
         
@@ -294,11 +318,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Check if this is the 404 page
             if (window.location.pathname === '/404.html' || document.querySelector('.error-icon')) {
-                // For 404 page, redirect to home page in selected language
-                // This is more user-friendly than staying on 404
-                window.location.href = `/${selectedLang}/`;
+                // For 404 page, translate in place
+                translatePage(selectedLang);
+                document.body.setAttribute('data-current-lang', selectedLang);
+                currentLang = selectedLang;
+                
+                // Store the preference for future 404 visits
+                storeLanguagePreference(selectedLang);
                 return;
             }
+            
+            // Store language preference for regular pages too
+            storeLanguagePreference(selectedLang);
             
             // For other pages, redirect as before
             let newPath = currentPath;
