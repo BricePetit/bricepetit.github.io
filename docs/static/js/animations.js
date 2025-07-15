@@ -129,7 +129,7 @@ const translations = {
         contactText: "Si vous pensez qu'il s'agit d'une erreur, n'hésitez pas à",
         contactForm: "me contacter",
         footerContact: "Restons en Contact",
-        footerRights: "Tous droits réservés"
+        footerRights: "Tous droits réservés."
     },
     en: {
         title: "Page Not Found",
@@ -149,8 +149,8 @@ const translations = {
         serverIssue: "There might be a temporary server issue",
         contactText: "If you believe this is an error, please feel free to",
         contactForm: "contact me",
-        footerContact: "Stay in Touch",
-        footerRights: "All rights reserved"
+        footerContact: "Keep in Touch",
+        footerRights: "All rights reserved."
     }
 };
 
@@ -267,7 +267,7 @@ function translatePage(lang) {
         // Update copyright text
         const footerRights = document.querySelector('.footer-bottom p');
         if (footerRights) {
-            footerRights.innerHTML = `&copy; 2025 Brice Petit. ${t.footerRights}.`;
+            footerRights.innerHTML = `&copy; 2025 Brice Petit. ${t.footerRights}`;
         }
     }
     
