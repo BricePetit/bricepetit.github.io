@@ -121,6 +121,26 @@ h3 {
         margin: 15px 25px;
         font-size: 1.5rem;
     }
+    
+    /* Prévenir le débordement horizontal global */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Assurer que tous les containers restent dans les limites */
+    .container, .academic-container, .enhanced-card {
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    /* Gestion des longs mots et URLs */
+    p, h1, h2, h3, h4, h5, h6, li, span {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 }
 
 /* ===== BASIC STYLES FOR THE SITE ===== */

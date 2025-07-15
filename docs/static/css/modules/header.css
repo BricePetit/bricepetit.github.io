@@ -215,25 +215,63 @@
 @media (max-width: 768px) {
     .header_container {
         flex-direction: column;
-        padding: 15px 20px;
-        gap: 15px;
+        padding: 10px 15px; /* Réduit le padding */
+        gap: 10px; /* Réduit l'espace */
+        min-height: auto; /* Permet au header de se contracter */
     }
 
     .header_container .menu_left {
         text-align: center;
     }
 
+    .header_container .menu_left h1 {
+        margin: 0; /* Supprime les marges par défaut */
+        font-size: 1.3rem; /* Réduit la taille du titre */
+    }
+
     .header_container .menu_right {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row; /* Navigation horizontale plutôt que verticale */
+        flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+        justify-content: center;
+        gap: 8px; /* Réduit l'espace entre les éléments */
         width: 100%;
     }
 
     .header_container .menu_right a {
-        width: 100%;
+        flex: none; /* Empêche l'expansion */
+        width: auto; /* Largeur automatique */
         text-align: center;
-        font-size: 14px;
-        padding: 8px 16px;
+        font-size: 12px; /* Taille de police plus petite */
+        padding: 6px 10px; /* Padding plus compact */
+        white-space: nowrap; /* Empêche le retour à la ligne dans les liens */
+    }
+
+    /* Style spécial pour le sélecteur de langue */
+    .language-selector {
+        order: 10; /* Met le sélecteur de langue à la fin */
+        margin-top: 5px;
+    }
+
+    .language-select {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Style encore plus compact pour très petits écrans */
+@media (max-width: 480px) {
+    .header_container {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .header_container .menu_left h1 {
+        font-size: 1.1rem;
+    }
+
+    .header_container .menu_right a {
+        font-size: 11px;
+        padding: 5px 8px;
     }
 }
 
