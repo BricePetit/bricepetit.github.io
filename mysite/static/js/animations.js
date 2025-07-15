@@ -108,14 +108,143 @@ document.addEventListener('DOMContentLoaded', function() {
     }, initialDelay + 100);
 });
 
-// Language selector for static site
+// Dynamic translation for 404 page
+const translations = {
+    fr: {
+        title: "Page Introuvable",
+        description: "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+        homeButton: "Retour à l'Accueil",
+        skillsButton: "Voir mes Compétences",
+        contactLink: "me contacter"
+    },
+    en: {
+        title: "Page Not Found",
+        description: "Sorry, the page you are looking for does not exist or has been moved.",
+        homeButton: "Back to Home",
+        skillsButton: "View my Skills",
+        contactLink: "contact me"
+    }
+};
+
+function translatePage(lang) {
+    if (!translations[lang]) return;
+    
+    const t = translations[lang];
+    
+    // Update page title in head
+    const pageTitle = document.querySelector('title');
+    if (pageTitle) {
+        pageTitle.textContent = `${t.title} - Brice Petit`;
+    }
+    
+    // Update page subtitle
+    const pageSubtitle = document.querySelector('.page-subtitle');
+    if (pageSubtitle) {
+        pageSubtitle.textContent = t.title;
+    }
+    
+    // Update description
+    const errorDescription = document.querySelector('.error-description');
+    if (errorDescription) {
+        errorDescription.textContent = t.description;
+    }
+    
+    // Update home button
+    const homeButton = document.querySelector('.cta-primary');
+    if (homeButton) {
+        homeButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            </svg>
+            ${t.homeButton}
+        `;
+        homeButton.href = `/${lang}/`;
+    }
+    
+    // Update skills button
+    const skillsButton = document.querySelector('.cta-secondary');
+    if (skillsButton) {
+        skillsButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H6.5A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/>
+            </svg>
+            ${t.skillsButton}
+        `;
+        skillsButton.href = `/${lang}/skills/`;
+    }
+    
+    // Update contact link in footer
+    const contactLink = document.querySelector('a[href*="#contact"]');
+    if (contactLink) {
+        contactLink.textContent = t.contactLink;
+    }
+    
+    // Update navigation links
+    const navigation = {
+        fr: {
+            skills: "Compétences",
+            academic: "Académique", 
+            education: "Formation & Expérience"
+        },
+        en: {
+            skills: "Skills",
+            academic: "Academic",
+            education: "Education & Work Experience"
+        }
+    };
+    
+    const nav = navigation[lang];
+    if (nav) {
+        const skillsNav = document.querySelector('a[href*="/skills/"]');
+        if (skillsNav) {
+            skillsNav.textContent = nav.skills;
+            skillsNav.href = `/${lang}/skills/`;
+        }
+        
+        const academicNav = document.querySelector('a[href*="/academic/"]');
+        if (academicNav) {
+            academicNav.textContent = nav.academic;
+            academicNav.href = `/${lang}/academic/`;
+        }
+        
+        const educationNav = document.querySelector('a[href*="/education/"]');
+        if (educationNav) {
+            educationNav.textContent = nav.education;
+            educationNav.href = `/${lang}/education/`;
+        }
+        
+        const homeNav = document.querySelector('a[href*="/fr/"], a[href*="/en/"]');
+        if (homeNav) {
+            homeNav.href = `/${lang}/`;
+        }
+    }
+}
+
+// Enhanced language selector for 404 page
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('language-select');
     if (languageSelect) {
-        // Set initial value based on current page
+        // Set initial value based on current page or URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
         const currentPath = window.location.pathname;
-        const currentLang = document.body.getAttribute('data-current-lang') || 
-                          (currentPath.startsWith('/en/') ? 'en' : 'fr');
+        let currentLang = document.body.getAttribute('data-current-lang') || 'fr';
+        
+        // Check if this is a 404 page and we have a language preference
+        if (window.location.pathname === '/404.html' || document.querySelector('.page-hero')) {
+            if (urlLang && translations[urlLang]) {
+                currentLang = urlLang;
+            } else {
+                // Try to detect language from referrer or browser language
+                const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
+                currentLang = browserLang;
+            }
+            
+            // Apply translation immediately
+            translatePage(currentLang);
+            document.body.setAttribute('data-current-lang', currentLang);
+        }
         
         // Set the correct option as selected
         languageSelect.value = currentLang;
@@ -131,7 +260,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Construct new URL
+            // Check if this is the 404 page
+            if (window.location.pathname === '/404.html' || document.querySelector('.page-hero')) {
+                // For 404 page, translate in place instead of redirecting
+                translatePage(selectedLang);
+                document.body.setAttribute('data-current-lang', selectedLang);
+                currentLang = selectedLang;
+                
+                // Update URL with language parameter (optional)
+                const newUrl = new URL(window.location);
+                newUrl.searchParams.set('lang', selectedLang);
+                window.history.replaceState({}, '', newUrl);
+                
+                return;
+            }
+            
+            // For other pages, redirect as before
             let newPath = currentPath;
             
             // Remove current language prefix if it exists
