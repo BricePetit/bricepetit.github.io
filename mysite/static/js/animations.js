@@ -129,27 +129,32 @@ const translations = {
 function translatePage(lang) {
     if (!translations[lang]) return;
     
+    // Only apply translation if this is the 404 page
+    if (!document.querySelector('.error-icon') && !window.location.pathname.includes('404')) {
+        return;
+    }
+    
     const t = translations[lang];
     
     // Update page title in head
     const pageTitle = document.querySelector('title');
-    if (pageTitle) {
+    if (pageTitle && pageTitle.textContent.includes('Introuvable')) {
         pageTitle.textContent = `${t.title} - Brice Petit`;
     }
     
-    // Update page subtitle
+    // Update page subtitle (only on 404 page)
     const pageSubtitle = document.querySelector('.page-subtitle');
     if (pageSubtitle) {
         pageSubtitle.textContent = t.title;
     }
     
-    // Update description
+    // Update description (only on 404 page)
     const errorDescription = document.querySelector('.error-description');
     if (errorDescription) {
         errorDescription.textContent = t.description;
     }
     
-    // Update home button
+    // Update home button (only on 404 page)
     const homeButton = document.querySelector('.cta-primary');
     if (homeButton) {
         homeButton.innerHTML = `
@@ -162,7 +167,7 @@ function translatePage(lang) {
         homeButton.href = `/${lang}/`;
     }
     
-    // Update skills button
+    // Update skills button (only on 404 page)
     const skillsButton = document.querySelector('.cta-secondary');
     if (skillsButton) {
         skillsButton.innerHTML = `
@@ -174,76 +179,78 @@ function translatePage(lang) {
         skillsButton.href = `/${lang}/skills/`;
     }
     
-    // Update contact link in footer
+    // Update contact link in footer (only on 404 page)
     const contactLink = document.querySelector('a[href*="#contact"]');
     if (contactLink) {
         contactLink.textContent = t.contactLink;
     }
     
-    // Update navigation links
-    const navigation = {
-        fr: {
-            skills: "Compétences",
-            academic: "Académique", 
-            education: "Formation & Expérience"
-        },
-        en: {
-            skills: "Skills",
-            academic: "Academic",
-            education: "Education & Work Experience"
-        }
-    };
-    
-    const nav = navigation[lang];
-    if (nav) {
-        const skillsNav = document.querySelector('a[href*="/skills/"]');
-        if (skillsNav) {
-            skillsNav.textContent = nav.skills;
-            skillsNav.href = `/${lang}/skills/`;
-        }
+    // Update navigation links (only on 404 page)
+    if (document.querySelector('.error-icon')) {
+        const navigation = {
+            fr: {
+                skills: "Compétences",
+                academic: "Académique", 
+                education: "Formation & Expérience"
+            },
+            en: {
+                skills: "Skills",
+                academic: "Academic",
+                education: "Education & Work Experience"
+            }
+        };
         
-        const academicNav = document.querySelector('a[href*="/academic/"]');
-        if (academicNav) {
-            academicNav.textContent = nav.academic;
-            academicNav.href = `/${lang}/academic/`;
-        }
-        
-        const educationNav = document.querySelector('a[href*="/education/"]');
-        if (educationNav) {
-            educationNav.textContent = nav.education;
-            educationNav.href = `/${lang}/education/`;
-        }
-        
-        const homeNav = document.querySelector('a[href*="/fr/"], a[href*="/en/"]');
-        if (homeNav) {
-            homeNav.href = `/${lang}/`;
+        const nav = navigation[lang];
+        if (nav) {
+            const skillsNav = document.querySelector('a[href*="/skills/"]');
+            if (skillsNav) {
+                skillsNav.textContent = nav.skills;
+                skillsNav.href = `/${lang}/skills/`;
+            }
+            
+            const academicNav = document.querySelector('a[href*="/academic/"]');
+            if (academicNav) {
+                academicNav.textContent = nav.academic;
+                academicNav.href = `/${lang}/academic/`;
+            }
+            
+            const educationNav = document.querySelector('a[href*="/education/"]');
+            if (educationNav) {
+                educationNav.textContent = nav.education;
+                educationNav.href = `/${lang}/education/`;
+            }
+            
+            const homeNav = document.querySelector('a[href*="/fr/"], a[href*="/en/"]');
+            if (homeNav) {
+                homeNav.href = `/${lang}/`;
+            }
         }
     }
 }
 
-// Enhanced language selector for 404 page
+// Enhanced language selector
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('language-select');
     if (languageSelect) {
-        // Set initial value based on current page or URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlLang = urlParams.get('lang');
         const currentPath = window.location.pathname;
         let currentLang = document.body.getAttribute('data-current-lang') || 'fr';
         
-        // Check if this is a 404 page and we have a language preference
-        if (window.location.pathname === '/404.html' || document.querySelector('.page-hero')) {
-            if (urlLang && translations[urlLang]) {
-                currentLang = urlLang;
-            } else {
-                // Try to detect language from referrer or browser language
-                const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
-                currentLang = browserLang;
-            }
+        // Special handling for 404 page only
+        if (window.location.pathname === '/404.html' || document.querySelector('.error-icon')) {
+            // Try to detect language from browser language for 404
+            const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
+            currentLang = browserLang;
             
-            // Apply translation immediately
+            // Apply translation immediately for 404 page
             translatePage(currentLang);
             document.body.setAttribute('data-current-lang', currentLang);
+        } else {
+            // For regular pages, detect from URL
+            if (currentPath.startsWith('/en/')) {
+                currentLang = 'en';
+            } else if (currentPath.startsWith('/fr/')) {
+                currentLang = 'fr';
+            }
         }
         
         // Set the correct option as selected
@@ -261,17 +268,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Check if this is the 404 page
-            if (window.location.pathname === '/404.html' || document.querySelector('.page-hero')) {
+            if (window.location.pathname === '/404.html' || document.querySelector('.error-icon')) {
                 // For 404 page, translate in place instead of redirecting
                 translatePage(selectedLang);
                 document.body.setAttribute('data-current-lang', selectedLang);
                 currentLang = selectedLang;
                 
-                // Update URL with language parameter (optional)
-                const newUrl = new URL(window.location);
-                newUrl.searchParams.set('lang', selectedLang);
-                window.history.replaceState({}, '', newUrl);
-                
+                // Don't modify URL for 404 page - keep it clean
                 return;
             }
             
