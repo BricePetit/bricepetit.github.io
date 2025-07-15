@@ -16,30 +16,17 @@
         <a class="Skills " href="/fr/skills/">Compétences</a>
         <a class="Academic current-page" href="/fr/academic/">Académique</a>
         <a class="Education " href="/fr/education/">Formation & Expérience</a>
-        <!-- Language Selector -->
+        <!-- Language Selector for Static Site -->
         <div class="language-selector">
-            
-            
-            
-            <form action="/i18n/setlang/" method="post" style="display: inline;">
-                <input type="hidden" name="csrfmiddlewaretoken" value="dBwkMnkElRjbB1r3MX7iwzF4SqzAPQnGD837mAsiWIbAR78vo2yTvmhjxTP6JrvC">
-                <select name="language" onchange="this.form.submit()" class="language-select">
-                    
-                        <option value="fr" selected>
-                            FR
-                        </option>
-                    
-                        <option value="en">
-                            EN
-                        </option>
-                    
-                </select>
-            </form>
+            <select id="language-select" class="language-select">
+                <option value="fr" selected>FR</option>
+                <option value="en">EN</option>
+            </select>
         </div>
     </div>
 </div>
     </head>
-    <body>
+    <body data-current-lang="fr">
         <!-- Hero Section for Academic Page -->
         <section class="page-hero">
             <div class="hero-content">

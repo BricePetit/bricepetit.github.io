@@ -70,6 +70,13 @@ def create_static_site():
                     content = response.content.decode('utf-8')
                     # Ajuster les liens statiques pour GitHub Pages (bricepetit.github.io)
                     content = content.replace('/static/', '/static/')
+                    
+                    # Injecter la langue actuelle dans le HTML pour le sélecteur JavaScript
+                    content = content.replace(
+                        '<body>',
+                        f'<body data-current-lang="{lang}">'
+                    )
+                    
                     f.write(content)
             else:
                 print(f"    ❌ Erreur {response.status_code} pour {page_name}")

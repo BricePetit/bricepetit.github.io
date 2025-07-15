@@ -107,3 +107,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, initialDelay + 100);
 });
+
+// Language selector for static site
+document.addEventListener('DOMContentLoaded', function() {
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        languageSelect.addEventListener('change', function() {
+            const selectedLang = this.value;
+            const currentPath = window.location.pathname;
+            
+            // Detect current language from URL or body data attribute
+            let currentLang = document.body.getAttribute('data-current-lang') || 'fr';
+            if (currentPath.startsWith('/en/')) {
+                currentLang = 'en';
+            } else if (currentPath.startsWith('/fr/')) {
+                currentLang = 'fr';
+            }
+            
+            // Don't reload if same language
+            if (selectedLang === currentLang) {
+                return;
+            }
+            
+            // Construct new URL
+            let newPath = currentPath;
+            
+            // Remove current language prefix if it exists
+            if (currentPath.startsWith('/fr/')) {
+                newPath = currentPath.substring(3);
+            } else if (currentPath.startsWith('/en/')) {
+                newPath = currentPath.substring(3);
+            } else if (currentPath === '/fr' || currentPath === '/en') {
+                newPath = '/';
+            } else if (currentPath === '/') {
+                newPath = '/';
+            }
+            
+            // Add new language prefix
+            newPath = '/' + selectedLang + newPath;
+            
+            // Handle root path
+            if (newPath === '/fr' || newPath === '/en') {
+                newPath += '/';
+            }
+            
+            // Redirect to new URL
+            window.location.href = newPath;
+        });
+        
+        // Set correct selection based on current URL or body data
+        const currentLang = document.body.getAttribute('data-current-lang') || 
+                          (window.location.pathname.startsWith('/en/') ? 'en' : 'fr');
+        languageSelect.value = currentLang;
+    }
+});

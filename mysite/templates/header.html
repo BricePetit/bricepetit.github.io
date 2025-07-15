@@ -7,21 +7,12 @@
         <a class="Skills {% if request.resolver_match.url_name == 'skills' %}current-page{% endif %}" href="{% url 'skills' %}">{% trans "Skills" %}</a>
         <a class="Academic {% if request.resolver_match.url_name == 'academic' %}current-page{% endif %}" href="{% url 'academic' %}">{% trans "Academic" %}</a>
         <a class="Education {% if request.resolver_match.url_name == 'education' %}current-page{% endif %}" href="{% url 'education' %}">{% trans "Education & Work Experience" %}</a>
-        <!-- Language Selector -->
+        <!-- Language Selector for Static Site -->
         <div class="language-selector">
-            {% get_current_language as LANGUAGE_CODE %}
-            {% get_available_languages as LANGUAGES %}
-            {% get_language_info_list for LANGUAGES as languages %}
-            <form action="{% url 'set_language' %}" method="post" style="display: inline;">
-                {% csrf_token %}
-                <select name="language" onchange="this.form.submit()" class="language-select">
-                    {% for language in languages %}
-                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                            {{ language.code|upper }}
-                        </option>
-                    {% endfor %}
-                </select>
-            </form>
+            <select id="language-select" class="language-select">
+                <option value="fr"{% if LANGUAGE_CODE == 'fr' %} selected{% endif %}>FR</option>
+                <option value="en"{% if LANGUAGE_CODE == 'en' %} selected{% endif %}>EN</option>
+            </select>
         </div>
     </div>
 </div>

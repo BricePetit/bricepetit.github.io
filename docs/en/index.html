@@ -17,30 +17,17 @@
         <a class="Skills " href="/en/skills/">Skills</a>
         <a class="Academic " href="/en/academic/">Academic</a>
         <a class="Education " href="/en/education/">Education & Work Experience</a>
-        <!-- Language Selector -->
+        <!-- Language Selector for Static Site -->
         <div class="language-selector">
-            
-            
-            
-            <form action="/i18n/setlang/" method="post" style="display: inline;">
-                <input type="hidden" name="csrfmiddlewaretoken" value="ftCwGoOGhR6Xqsk8yVtY1DwwMj8g9xCcF09jgBWkSIYmGy1Aa0Uz0q8LrMoM38K8">
-                <select name="language" onchange="this.form.submit()" class="language-select">
-                    
-                        <option value="fr">
-                            FR
-                        </option>
-                    
-                        <option value="en" selected>
-                            EN
-                        </option>
-                    
-                </select>
-            </form>
+            <select id="language-select" class="language-select">
+                <option value="fr">FR</option>
+                <option value="en" selected>EN</option>
+            </select>
         </div>
     </div>
 </div>
     </head>
-    <body>
+    <body data-current-lang="en">
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
