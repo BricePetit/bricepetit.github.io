@@ -231,6 +231,27 @@ def education(request):
             'is_current': True
         },
         {
+            'period': _('2022 - Present'),
+            'duration': _('3+ years'),
+            'job_title': _('Youth Movement Coordinator'),
+            'company': _('Youth Movement'),
+            'location': _('France'),
+            'contract_type': _('Volunteer'),
+            'context': _('Social engagement and youth development'),
+            'responsibilities': [
+                _('Coordination and supervision of youth activities'),
+                _('Event organization and management'),
+                _('Team leadership and volunteer coordination')
+            ],
+            'achievements': [
+                _('Successful organization of camps and activities'),
+                _('Building strong relationships with young people'),
+                _('Strengthening leadership and pedagogical skills')
+            ],
+            'tech_stack': [],
+            'is_current': True
+        },
+        {
             'period': '2021 - 2022',
             'duration': _('1 year'),
             'job_title': _('Server'),
@@ -359,12 +380,13 @@ def education(request):
     )
 
 
-def custom_404_view(request):
+def custom_404_view(request, exception):
     """
     Page 404 handler for custom error view.
     This view is used when a page is not found.
 
     :param request:     The HTTP request object.
+    :param exception:   The exception that triggered the 404.
 
     :return:            Rendered 404 page with custom title.
     """
