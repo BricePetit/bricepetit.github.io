@@ -127,7 +127,9 @@ const translations = {
         outdatedLink: "Vous avez peut-être suivi un lien obsolète",
         serverIssue: "Il peut y avoir un problème de serveur temporaire",
         contactText: "Si vous pensez qu'il s'agit d'une erreur, n'hésitez pas à",
-        contactForm: "me contacter"
+        contactForm: "me contacter",
+        footerContact: "Restons en Contact",
+        footerRights: "Tous droits réservés"
     },
     en: {
         title: "Page Not Found",
@@ -146,7 +148,9 @@ const translations = {
         outdatedLink: "You might have followed an outdated link",
         serverIssue: "There might be a temporary server issue",
         contactText: "If you believe this is an error, please feel free to",
-        contactForm: "contact me"
+        contactForm: "contact me",
+        footerContact: "Stay in Touch",
+        footerRights: "All rights reserved"
     }
 };
 
@@ -252,6 +256,21 @@ function translatePage(lang) {
         }
     }
     
+    // Update footer translations (only on 404 page)
+    if (document.querySelector('.error-icon')) {
+        // Update "Stay in Touch" / "Restons en Contact"
+        const footerContactTitle = document.querySelector('.footer-section h3');
+        if (footerContactTitle) {
+            footerContactTitle.textContent = t.footerContact;
+        }
+        
+        // Update copyright text
+        const footerRights = document.querySelector('.footer-bottom p');
+        if (footerRights) {
+            footerRights.innerHTML = `&copy; 2025 Brice Petit. ${t.footerRights}.`;
+        }
+    }
+    
     // Update navigation links (only on 404 page)
     if (document.querySelector('.error-icon')) {
         const navigation = {
@@ -328,39 +347,32 @@ document.addEventListener('DOMContentLoaded', function() {
             // Try to detect language from multiple sources for 404 page
             let detectedLang = 'fr'; // default
             
-            // 1. Check URL parameter first (?lang=en or ?lang=fr)
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang === 'en' || urlLang === 'fr') {
-                detectedLang = urlLang;
-            } else {
-                // 2. Check the referrer URL (if user came from /en/ or /fr/ page)
-                if (document.referrer) {
-                    try {
-                        const referrerUrl = new URL(document.referrer);
-                        if (referrerUrl.pathname.startsWith('/en/')) {
-                            detectedLang = 'en';
-                        } else if (referrerUrl.pathname.startsWith('/fr/')) {
-                            detectedLang = 'fr';
-                        }
-                    } catch (e) {
-                        // Invalid referrer URL, ignore
+            // 1. Check the referrer URL (if user came from /en/ or /fr/ page)
+            if (document.referrer) {
+                try {
+                    const referrerUrl = new URL(document.referrer);
+                    if (referrerUrl.pathname.startsWith('/en/')) {
+                        detectedLang = 'en';
+                    } else if (referrerUrl.pathname.startsWith('/fr/')) {
+                        detectedLang = 'fr';
                     }
+                } catch (e) {
+                    // Invalid referrer URL, ignore
                 }
-                
-                // 3. Check stored language preference (from previous navigation)
-                if (detectedLang === 'fr' && !document.referrer) {
-                    const storedLang = getStoredLanguagePreference();
-                    if (storedLang && (storedLang === 'en' || storedLang === 'fr')) {
-                        detectedLang = storedLang;
-                    }
+            }
+            
+            // 2. Check stored language preference (from previous navigation)
+            if (detectedLang === 'fr' && !document.referrer) {
+                const storedLang = getStoredLanguagePreference();
+                if (storedLang && (storedLang === 'en' || storedLang === 'fr')) {
+                    detectedLang = storedLang;
                 }
-                
-                // 4. Fallback to browser language if no other context
-                if (detectedLang === 'fr' && !document.referrer && !getStoredLanguagePreference()) {
-                    const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
-                    detectedLang = browserLang;
-                }
+            }
+            
+            // 3. Fallback to browser language if no other context
+            if (detectedLang === 'fr' && !document.referrer && !getStoredLanguagePreference()) {
+                const browserLang = navigator.language.startsWith('en') ? 'en' : 'fr';
+                detectedLang = browserLang;
             }
             
             currentLang = detectedLang;
@@ -395,18 +407,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Check if this is the 404 page
             if (window.location.pathname === '/404.html' || document.querySelector('.error-icon')) {
-                // For 404 page, translate in place AND update URL for consistency
-                translatePage(selectedLang);
-                document.body.setAttribute('data-current-lang', selectedLang);
-                currentLang = selectedLang;
-                
-                // Store the preference for future 404 visits
-                storeLanguagePreference(selectedLang);
-                
-                // Update URL to show the language preference (this helps with bookmarking and sharing)
-                const newUrl = window.location.origin + '/404.html?lang=' + selectedLang;
-                window.history.replaceState({}, '', newUrl);
-                
+                // For 404 page, redirect to the appropriate language section
+                // This creates a proper URL structure /en/ or /fr/
+                if (selectedLang === 'en') {
+                    window.location.href = '/en/';
+                } else {
+                    window.location.href = '/fr/';
+                }
                 return;
             }
             
