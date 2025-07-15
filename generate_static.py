@@ -39,6 +39,7 @@ def create_static_site():
         'skills': '/skills/',
         'education': '/education/',
         'academic': '/academic/',
+        '404': '/test-404/',  # Utiliser la route de test pour la 404
     }
     
     languages = ['fr', 'en']
@@ -53,6 +54,10 @@ def create_static_site():
         lang_dir.mkdir(exist_ok=True)
         
         for page_name, url in pages.items():
+            # Skip 404 page during language-specific generation
+            if page_name == '404':
+                continue
+                
             print(f"    - {page_name}.html")
             
             # Activer la langue pour cette requête
@@ -105,6 +110,28 @@ def create_static_site():
     if static_source.exists():
         shutil.copytree(static_source, static_dest)
     
+    # Générer la page 404 personnalisée pour GitHub Pages
+    print("  🚫 Création de la page 404 personnalisée...")
+    activate('fr')  # Utiliser le français par défaut pour la 404
+    response = client.get('/fr/test-404/', HTTP_ACCEPT_LANGUAGE='fr')
+    
+    if response.status_code == 200:
+        with open(output_dir / '404.html', 'w', encoding='utf-8') as f:
+            content = response.content.decode('utf-8')
+            # Ajuster les liens statiques
+            content = content.replace('/static/', '/static/')
+            # Injecter la langue française par défaut
+            content = content.replace('<body>', '<body data-current-lang="fr">')
+            # Marquer le français comme sélectionné
+            content = content.replace(
+                '<option value="fr">FR</option>',
+                '<option value="fr" selected>FR</option>'
+            )
+            f.write(content)
+        print("    ✅ Page 404.html créée à la racine")
+    else:
+        print("    ❌ Erreur lors de la génération de la page 404")
+    
     # Créer une page d'accueil qui redirige vers /fr/
     print("  🏠 Création de la page d'accueil...")
     index_content = """<!DOCTYPE html>
@@ -134,6 +161,7 @@ def create_static_site():
     print("🔗 Structure:")
     print("   docs/")
     print("   ├── index.html (redirection)")
+    print("   ├── 404.html (page d'erreur personnalisée)")
     print("   ├── .nojekyll")
     print("   ├── static/ (CSS, JS, images)")
     print("   ├── fr/ (version française)")
