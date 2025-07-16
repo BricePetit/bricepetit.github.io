@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -214,14 +213,6 @@ msgid "About My Research"
 msgstr "À Propos de Ma Recherche"
 
 #: mysite/templates/home.html:85
-#, fuzzy
-#| msgid ""
-#| "I am a PhD student at the Institut de Recherches Interdisciplinaires et "
-#| "de Développements en Intelligence Artificielle (IRIDIA) at the École "
-#| "Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold "
-#| "a Master's degree in Computer Science from the Université Libre de "
-#| "Bruxelles. During my studies, I focused on artificial intelligence, "
-#| "algorithms, and mathematics."
 msgid ""
 "I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
 "Développements en Intelligence Artificielle (IRIDIA) at the École "
@@ -417,8 +408,6 @@ msgid "Python"
 msgstr "Python"
 
 #: mysite/views.py:47
-#, fuzzy
-#| msgid "Main language for ML/DL, data science and web development"
 msgid "Main language for ML and DL, data science and web development"
 msgstr "Langage principal pour ML/DL, science des données et développement web"
 
@@ -1105,15 +1094,12 @@ msgid "Brice Petit - Education & Experience"
 msgstr "Brice Petit - Formation & Expérience"
 
 #: mysite/views.py:397 mysite/views.py:415
-#, fuzzy
-#| msgid "Photo de Brice Petit"
 msgid "Page Not Found - Brice Petit"
-msgstr "Photo de Brice Petit"
+msgstr "Page Introuvable - Brice Petit"
 
 #~ msgid "Educational program development"
 #~ msgstr "Développement de programmes éducatifs"
 
-#, fuzzy
 #~| msgid "Development of machine learning algorithms"
 #~ msgid "Development of educational and recreational programs"
 #~ msgstr "Développement de programmes éducatifs et récréatifs"

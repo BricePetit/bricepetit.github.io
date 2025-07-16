@@ -177,36 +177,28 @@ msgid "View Research"
 msgstr "View Research"
 
 #: mysite/templates/home.html:59
-#, fuzzy
-#| msgid "4 years"
 msgid "Years"
-msgstr "4 years"
+msgstr "Years"
 
 #: mysite/templates/home.html:60
-#, fuzzy
-#| msgid "Teaching Experience"
 msgid "PhD Research Experience"
-msgstr "Teaching Experience"
+msgstr "PhD Research Experience"
 
 #: mysite/templates/home.html:64
 msgid "Households"
 msgstr "Households"
 
 #: mysite/templates/home.html:65
-#, fuzzy
-#| msgid "Energy Data"
 msgid "Energy Data Analyzed"
-msgstr "Energy Data"
+msgstr "Energy Data Analyzed"
 
 #: mysite/templates/home.html:69
 msgid "Focus"
 msgstr "Focus"
 
 #: mysite/templates/home.html:70
-#, fuzzy
-#| msgid "Machine Learning & Deep Learning"
 msgid "Machine Learning & Forecasting"
-msgstr "Machine Learning & Deep Learning"
+msgstr "Machine Learning & Forecasting"
 
 #: mysite/templates/home.html:74
 msgid "University"
@@ -221,14 +213,6 @@ msgid "About My Research"
 msgstr "About My Research"
 
 #: mysite/templates/home.html:85
-#, fuzzy
-#| msgid ""
-#| "I am a PhD student at the Institut de Recherches Interdisciplinaires et "
-#| "de Développements en Intelligence Artificielle (IRIDIA) at the École "
-#| "Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold "
-#| "a Master's degree in Computer Science from the Université Libre de "
-#| "Bruxelles. During my studies, I focused on artificial intelligence, "
-#| "algorithms, and mathematics."
 msgid ""
 "I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
 "Développements en Intelligence Artificielle (IRIDIA) at the École "
@@ -420,10 +404,8 @@ msgid "Python"
 msgstr "Python"
 
 #: mysite/views.py:47
-#, fuzzy
-#| msgid "Main language for ML/DL, data science and web development"
 msgid "Main language for ML and DL, data science and web development"
-msgstr "Main language for ML/DL, data science and web development"
+msgstr "Main language for ML and DL, data science and web development"
 
 #: mysite/views.py:48
 msgid "C++"
@@ -462,10 +444,8 @@ msgid "TensorFlow"
 msgstr "TensorFlow"
 
 #: mysite/views.py:55
-#, fuzzy
-#| msgid "Deep Learning & Neural Networks"
 msgid "Deep learning and neural networks"
-msgstr "Deep Learning & Neural Networks"
+msgstr "Deep learning and neural networks"
 
 #: mysite/views.py:56
 msgid "PyTorch"
@@ -588,8 +568,6 @@ msgid "Time analysis techniques, trend and seasonality detection"
 msgstr "Time analysis techniques, trend and seasonality detection"
 
 #: mysite/views.py:83
-#, fuzzy
-#| msgid "PhD Student in AI & Energy Forecasting"
 msgid "Energy Forecasting"
 msgstr "PhD Student in AI & Energy Forecasting"
 
@@ -598,8 +576,6 @@ msgid "Energy consumption and production prediction in business context"
 msgstr "Energy consumption and production prediction in business context"
 
 #: mysite/views.py:84
-#, fuzzy
-#| msgid "Energy Communities & Sustainability"
 msgid "Energy Communities"
 msgstr "Energy Communities & Sustainability"
 
@@ -656,8 +632,6 @@ msgid "Data parser for Renewgy company"
 msgstr "Data parser for Renewgy company"
 
 #: mysite/views.py:99
-#, fuzzy
-#| msgid "Big Data Analytics & Processing"
 msgid "Data Processing"
 msgstr "Big Data Analytics & Processing"
 
@@ -695,8 +669,6 @@ msgid "Machine Learning"
 msgstr "Machine Learning"
 
 #: mysite/views.py:123
-#, fuzzy
-#| msgid "Big Data Analytics & Processing"
 msgid "Signal Processing"
 msgstr "Big Data Analytics & Processing"
 
@@ -756,8 +728,6 @@ msgid "Conversational level"
 msgstr "Conversational level"
 
 #: mysite/views.py:157
-#, fuzzy
-#| msgid "Brice Petit - Home page"
 msgid "Brice Petit - Skills & Expertise"
 msgstr "Brice Petit - Home page"
 
@@ -788,14 +758,10 @@ msgid ""
 msgstr ""
 
 #: mysite/views.py:192
-#, fuzzy
-#| msgid "Brice Petit - Home page"
 msgid "Brice Petit - Academic Profile"
 msgstr "Brice Petit - Home page"
 
 #: mysite/views.py:193
-#, fuzzy
-#| msgid "Welcome to the home page."
 msgid "Welcome to the academic page."
 msgstr "Welcome to the home page."
 
@@ -825,8 +791,6 @@ msgid "FARI & AIEG Collaboration"
 msgstr "FARI & AIEG Collaboration"
 
 #: mysite/views.py:219
-#, fuzzy
-#| msgid "Artificial Intelligence & Machine Learning"
 msgid "Research in artificial intelligence applied to energy"
 msgstr "Artificial Intelligence & Machine Learning"
 
@@ -883,8 +847,6 @@ msgid "Coordination and supervision of youth activities"
 msgstr "Coordination and supervision of youth activities"
 
 #: mysite/views.py:243
-#, fuzzy
-#| msgid "Containerization and deployment"
 msgid "Event organization and management"
 msgstr "Event organization and management"
 
@@ -913,10 +875,8 @@ msgid "Server"
 msgstr "Server"
 
 #: mysite/views.py:260 mysite/views.py:281 mysite/views.py:302
-#, fuzzy
-#| msgid "PhD Student"
 msgid "Student job"
-msgstr "PhD Student"
+msgstr "Student job"
 
 #: mysite/views.py:261
 msgid "Customer service in specialized beer bar"
@@ -1027,8 +987,6 @@ msgid "PhD in Engineering Sciences"
 msgstr "PhD in Engineering Sciences"
 
 #: mysite/views.py:326
-#, fuzzy
-#| msgid "Artificial Intelligence & Machine Learning"
 msgid "Artificial Intelligence & Energy"
 msgstr "Artificial Intelligence & Machine Learning"
 
@@ -1069,8 +1027,6 @@ msgid "Université Libre de Bruxelles"
 msgstr "Université Libre de Bruxelles"
 
 #: mysite/views.py:343
-#, fuzzy
-#| msgid "Artificial Intelligence & Machine Learning"
 msgid "Artificial Intelligence & embedded systems"
 msgstr "Artificial Intelligence & Machine Learning"
 
@@ -1119,21 +1075,16 @@ msgid "Databases and systems"
 msgstr "Databases and systems"
 
 #: mysite/views.py:376
-#, fuzzy
-#| msgid "Education & Work Experience"
 msgid "Brice Petit - Education & Experience"
 msgstr "Education & Work Experience"
 
 #: mysite/views.py:397 mysite/views.py:415
-#, fuzzy
-#| msgid "Photo de Brice Petit"
 msgid "Page Not Found - Brice Petit"
 msgstr "Photo of Brice Petit"
 
 #~ msgid "Educational program development"
 #~ msgstr "Educational program development"
 
-#, fuzzy
 #~| msgid "Development of machine learning algorithms"
 #~ msgid "Development of educational and recreational programs"
 #~ msgstr "Development of educational and recreational programs"
