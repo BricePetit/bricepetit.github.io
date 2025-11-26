@@ -161,10 +161,8 @@ msgid "Applied AI Engineer - Energy Analytics"
 msgstr "Ingénieur IA appliquée — Analyse énergétique"
 
 #: mysite/templates/home.html:30
-#, fuzzy
-#| msgid "contact form"
 msgid "Contact Me"
-msgstr "me contacter"
+msgstr "Contactez-moi"
 
 #: mysite/templates/home.html:37
 msgid "View Research"

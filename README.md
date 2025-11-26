@@ -1,6 +1,6 @@
 # Brice Petit - Site Web Personnel
 
-Site web personnel de Brice Petit, PhD Student en Intelligence Artificielle et Prévision Énergétique à l'Université Libre de Bruxelles (ULB).
+Site web personnel de Brice Petit,  Ingénieur en Intelligence Artificielle et Prévision Énergétique appliquée à l'Université Libre de Bruxelles (ULB).
 
 ## 🚀 Fonctionnalités
 
@@ -11,7 +11,7 @@ Site web personnel de Brice Petit, PhD Student en Intelligence Artificielle et P
   - 🏠 Accueil avec présentation et métriques
   - 🛠️ Compétences et projets
   - 🎓 Formation et expérience
-  - 📚 Recherche académique
+  - 📚 Académique
   - 🤖 Page 404 personnalisée
 
 ## 🛠️ Technologies
