@@ -187,10 +187,7 @@
 }
 
 /* Color variants for different types */
-.academic-type[data-type="publication"] {
-    background: linear-gradient(135deg, #50C878 0%, #4A90A4 100%);
-    border-color: #50C878;
-}
+/* Publication tag removed — styling for publication tags intentionally removed per request */
 
 .academic-type[data-type="course"] {
     background: linear-gradient(135deg, #4A90A4 0%, #708090 100%);

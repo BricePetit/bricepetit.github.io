@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 16:27+0200\n"
+"POT-Creation-Date: 2025-11-26 14:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,12 +161,12 @@ msgid "Photo de Brice Petit"
 msgstr "Photo of Brice Petit"
 
 #: mysite/templates/home.html:19
-msgid "PhD Student"
-msgstr "PhD Student"
+msgid "Applied AI Engineer"
+msgstr ""
 
 #: mysite/templates/home.html:23
-msgid "PhD Student in AI & Energy Forecasting"
-msgstr "PhD Student in AI & Energy Forecasting"
+msgid "Applied AI Engineer - Energy Analytics"
+msgstr ""
 
 #: mysite/templates/home.html:30
 msgid "Contact Me"
@@ -176,50 +176,56 @@ msgstr "Contact Me"
 msgid "View Research"
 msgstr "View Research"
 
-#: mysite/templates/home.html:59
+#: mysite/templates/home.html:60
 msgid "Years"
 msgstr "Years"
 
-#: mysite/templates/home.html:60
+#: mysite/templates/home.html:61
 msgid "PhD Research Experience"
 msgstr "PhD Research Experience"
 
-#: mysite/templates/home.html:64
+#: mysite/templates/home.html:65
 msgid "Households"
 msgstr "Households"
 
-#: mysite/templates/home.html:65
+#: mysite/templates/home.html:66
 msgid "Energy Data Analyzed"
 msgstr "Energy Data Analyzed"
 
-#: mysite/templates/home.html:69
+#: mysite/templates/home.html:70
 msgid "Focus"
 msgstr "Focus"
 
-#: mysite/templates/home.html:70
+#: mysite/templates/home.html:71
 msgid "Machine Learning & Forecasting"
 msgstr "Machine Learning & Forecasting"
 
-#: mysite/templates/home.html:74
+#: mysite/templates/home.html:75
 msgid "University"
 msgstr "University"
 
-#: mysite/templates/home.html:75
+#: mysite/templates/home.html:76
 msgid "IRIDIA Research Lab"
 msgstr "IRIDIA Research Lab"
 
-#: mysite/templates/home.html:83
+#: mysite/templates/home.html:85
 msgid "About My Research"
 msgstr "About My Research"
 
-#: mysite/templates/home.html:85
+#: mysite/templates/home.html:87
+#, fuzzy
+#| msgid ""
+#| "I am a PhD student at the Institut de Recherches Interdisciplinaires et "
+#| "de Développements en Intelligence Artificielle (IRIDIA) at the École "
+#| "Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold "
+#| "a Master\\'s degree in Computer Science from the Université Libre de "
+#| "Bruxelles. During my studies, I focused on artificial intelligence, "
+#| "algorithms, and mathematics."
 msgid ""
-"I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
-"Développements en Intelligence Artificielle (IRIDIA) at the École "
-"Polytechnique de Bruxelles (Université Libre de Bruxelles - ULB). I hold a "
-"Master\\'s degree in Computer Science from the Université Libre de "
-"Bruxelles. During my studies, I focused on artificial intelligence, "
-"algorithms, and mathematics."
+"I am a Data Scientist and Machine Learning Engineer specializing in "
+"artificial intelligence applied to energy systems. I hold a Master’s degree "
+"in Computer Science from the Université Libre de Bruxelles, where I focused "
+"on artificial intelligence, algorithms, and applied mathematics."
 msgstr ""
 "I am a PhD student at the Institut de Recherches Interdisciplinaires et de "
 "Développements en Intelligence Artificielle (IRIDIA) at the École "
@@ -228,35 +234,43 @@ msgstr ""
 "During my studies, I focused on artificial intelligence, algorithms, and "
 "mathematics."
 
-#: mysite/templates/home.html:87
-msgid ""
-"I am interested in various fields, including deep learning, machine "
-"learning, reinforcement learning, and big data. In addition to these "
-"technical interests, I am also deeply concerned with important global "
-"challenges such as climate change, energy, health, and well-being."
-msgstr ""
-"I am interested in various fields, including deep learning, machine "
-"learning, reinforcement learning, and big data. In addition to these "
-"technical interests, I am also deeply concerned with important global "
-"challenges such as climate change, energy, health, and well-being."
-
 #: mysite/templates/home.html:89
+#, fuzzy
+#| msgid ""
+#| "I am interested in various fields, including deep learning, machine "
+#| "learning, reinforcement learning, and big data. In addition to these "
+#| "technical interests, I am also deeply concerned with important global "
+#| "challenges such as climate change, energy, health, and well-being."
 msgid ""
-"My PhD research focuses on electricity forecasting. Initially, we studied "
-"<i>Voisins d'Énergie</i>, a co-created research project that evaluates the "
-"flexibility of electricity demand at the level of energy communities. To "
-"measure consumption and production in each household, we deployed a "
-"comprehensive data collection system."
+"I work on a wide range of topics, including deep learning, machine learning, "
+"reinforcement learning, and large-scale data processing. Beyond the "
+"technical aspects, I am particularly driven by global challenges such as "
+"climate change, energy transition, and sustainable resource management."
 msgstr ""
-"My PhD research focuses on electricity forecasting. Initially, we studied "
-"<i>Voisins d'Énergie</i>, a co-created research project that evaluates the "
-"flexibility of electricity demand at the level of energy communities. To "
-"measure consumption and production in each household, we deployed a "
-"comprehensive data collection system."
+"I am interested in various fields, including deep learning, machine "
+"learning, reinforcement learning, and big data. In addition to these "
+"technical interests, I am also deeply concerned with important global "
+"challenges such as climate change, energy, health, and well-being."
 
 #: mysite/templates/home.html:91
 msgid ""
-"Subsequently, in collaboration with AIEG — a network operator — we explored "
+"My recent work includes electricity forecasting projects, data-driven "
+"optimization, and intelligent decision-support systems. I contributed to "
+"Voisins d’Énergie, a co-creation initiative exploring energy flexibility and "
+"community-based energy management, for which I designed and deployed a "
+"complete data collection and monitoring platform."
+msgstr ""
+
+#: mysite/templates/home.html:93
+#, fuzzy
+#| msgid ""
+#| "Subsequently, in collaboration with AIEG — a network operator — we "
+#| "explored electricity forecasting (both consumption and production) to "
+#| "address the challenge of ensuring that production does not exceed network "
+#| "losses. Finally, we will investigate the development of an intelligent "
+#| "distribution key for energy sharing."
+msgid ""
+"Subsequently, in collaboration with AIEG - a network operator - we explored "
 "electricity forecasting (both consumption and production) to address the "
 "challenge of ensuring that production does not exceed network losses. "
 "Finally, we will investigate the development of an intelligent distribution "
@@ -268,39 +282,39 @@ msgstr ""
 "Finally, we will investigate the development of an intelligent distribution "
 "key for energy sharing."
 
-#: mysite/templates/home.html:100
+#: mysite/templates/home.html:102
 msgid "Research Topics"
 msgstr "Research Topics"
 
-#: mysite/templates/home.html:102
+#: mysite/templates/home.html:104
 msgid "Artificial Intelligence & Machine Learning"
 msgstr "Artificial Intelligence & Machine Learning"
 
-#: mysite/templates/home.html:103
+#: mysite/templates/home.html:105
 msgid "Time Series Forecasting & Prediction"
 msgstr "Time Series Forecasting & Prediction"
 
-#: mysite/templates/home.html:104
+#: mysite/templates/home.html:106
 msgid "Big Data Analytics & Processing"
 msgstr "Big Data Analytics & Processing"
 
-#: mysite/templates/home.html:105
+#: mysite/templates/home.html:107
 msgid "Energy Sharing & Smart Grids"
 msgstr "Energy Sharing & Smart Grids"
 
-#: mysite/templates/home.html:106
+#: mysite/templates/home.html:108
 msgid "Energy Communities & Sustainability"
 msgstr "Energy Communities & Sustainability"
 
-#: mysite/templates/home.html:107
+#: mysite/templates/home.html:109
 msgid "Deep Learning & Neural Networks"
 msgstr "Deep Learning & Neural Networks"
 
-#: mysite/templates/home.html:112
+#: mysite/templates/home.html:114
 msgid "Where to Find Me"
 msgstr "Where to Find Me"
 
-#: mysite/templates/home.html:130
+#: mysite/templates/home.html:132
 msgid "Office:"
 msgstr "Office:"
 
@@ -807,8 +821,8 @@ msgid "Student supervision and research projects"
 msgstr "Student supervision and research projects"
 
 #: mysite/views.py:225
-msgid "Development of energy prediction models (XGBoost, CNN, LSTM)"
-msgstr "Development of energy prediction models (XGBoost, CNN, LSTM)"
+msgid "Development of energy prediction models (XGBoost, CNN, LSTM, Transformer)"
+msgstr "Development of energy prediction models (XGBoost, CNN, LSTM, Transformer)"
 
 #: mysite/views.py:226
 msgid "Data collection from 100+ households via IoT"
@@ -1081,6 +1095,25 @@ msgstr "Education & Work Experience"
 #: mysite/views.py:397 mysite/views.py:415
 msgid "Page Not Found - Brice Petit"
 msgstr "Photo of Brice Petit"
+
+#~ msgid "PhD Student"
+#~ msgstr "PhD Student"
+
+#~ msgid "PhD Student in AI & Energy Forecasting"
+#~ msgstr "PhD Student in AI & Energy Forecasting"
+
+#~ msgid ""
+#~ "My PhD research focuses on electricity forecasting. Initially, we studied "
+#~ "<i>Voisins d'Énergie</i>, a co-created research project that evaluates "
+#~ "the flexibility of electricity demand at the level of energy communities. "
+#~ "To measure consumption and production in each household, we deployed a "
+#~ "comprehensive data collection system."
+#~ msgstr ""
+#~ "My PhD research focuses on electricity forecasting. Initially, we studied "
+#~ "<i>Voisins d'Énergie</i>, a co-created research project that evaluates "
+#~ "the flexibility of electricity demand at the level of energy communities. "
+#~ "To measure consumption and production in each household, we deployed a "
+#~ "comprehensive data collection system."
 
 #~ msgid "Educational program development"
 #~ msgstr "Educational program development"

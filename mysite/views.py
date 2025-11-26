@@ -119,7 +119,7 @@ def skills(request):
         {
             'name': 'VdE NILM',
             'url': 'https://github.com/BricePetit/VdE_NILM',
-            'description': _('Research on electrical data disaggregation (abandoned due to funding issues)'),
+            'description': _('Electrical data disaggregation project using AI/ML techniques (discontinued due to funding constraints)'),
             'tech': ['Python', _('Machine Learning'), _('Signal Processing')]
         },
         {
@@ -177,9 +177,6 @@ def academic(request):
     :return:            Rendered academic profile page with detailed work experiences and education
                         timeline.
     """
-    publications = {
-        _('TODO') : _('PAPER TYPE')
-    }
     courses = {
         _('Université Libre de Bruxelles - INFO-H402 - Computing project') : _('Project'),
         _('Université Libre de Bruxelles - INFO-S2001 - Informatique') : _('Project'),
@@ -191,7 +188,6 @@ def academic(request):
         {
             'title': _('Brice Petit - Academic Profile'),
             'content': _('Welcome to the academic page.'),
-            'publications' : publications,
             'courses' : courses
         }
     )
@@ -210,19 +206,19 @@ def education(request):
         {
             'period': _('2022 - Present'),
             'duration': _('3+ years'),
-            'job_title': _('PhD Student & Research Assistant'),
+            'job_title': _('Applied AI Engineer'),
             'company': 'IRIDIA - ULB',
             'location': _('Brussels, Belgium'),
             'contract_type': _('Full-time'),
             'context': _('FARI & AIEG Collaboration'),
             'responsibilities': [
-                _('Research in artificial intelligence applied to energy'),
+                _('AI and machine learning applied to energy systems'),
                 _('Teaching assistant in computer science'),
-                _('Development of machine learning algorithms'),
-                _('Student supervision and research projects')
+                _('Development and deployment of machine learning models'),
+                _('Student supervision and technical project support')
             ],
             'achievements': [
-                _('Development of energy prediction models (XGBoost, CNN, LSTM)'),
+                _('Development of energy prediction models (XGBoost, CNN, LSTM, Transformer)'),
                 _('Data collection from 100+ households via IoT'),
                 _('Creation of NoSQL database (Cassandra) for big data'),
                 _('Django web interface for energy data visualization')
@@ -231,8 +227,8 @@ def education(request):
             'is_current': True
         },
         {
-            'period': _('2022 - Present'),
-            'duration': _('3+ years'),
+            'period': _('2022 - 2025'),
+            'duration': _('3 years'),
             'job_title': _('Youth Movement Coordinator'),
             'company': _('Youth Movement'),
             'location': _('France'),
@@ -249,7 +245,7 @@ def education(request):
                 _('Strengthening leadership and pedagogical skills')
             ],
             'tech_stack': [],
-            'is_current': True
+            'is_current': False
         },
         {
             'period': '2021 - 2022',
@@ -317,23 +313,6 @@ def education(request):
     ]
     # Education structure with more details.
     education_timeline = [
-        {
-            'period': _('2022 - Present'),
-            'duration': _('3+ years'),
-            'degree': _('PhD in Engineering Sciences'),
-            'institution': 'IRIDIA - ULB',
-            'location': _('Brussels, Belgium'),
-            'specialization': _('Artificial Intelligence & Energy'),
-            'collaboration': _('FARI & AIEG'),
-            'focus_areas': [
-                _('Machine Learning applied to energy'),
-                _('Electrical consumption prediction'),
-                _('Energy community optimization'),
-                _('Time series analysis')
-            ],
-            'status': _('In progress'),
-            'is_current': True
-        },
         {
             'period': '2020 - 2022',
             'duration': _('2 years'),
