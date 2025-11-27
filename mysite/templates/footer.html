@@ -13,9 +13,16 @@
                 <a href="https://github.com/BricePetit" target="_blank" class="contact-item">
                     <span>💻 GitHub</span>
                 </a>
-                <a href="/static/cv/Brice_Petit_CV.pdf" target="_blank" class="contact-item">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if LANGUAGE_CODE == 'fr' %}
+                <a href="/static/cv/BricePetitCV2025_FR.pdf" target="_blank" class="contact-item">
                     <span>📄 CV</span>
                 </a>
+                {% else %}
+                <a href="/static/cv/BricePetitCV2025_EN.pdf" target="_blank" class="contact-item">
+                    <span>📄 CV</span>
+                </a>
+                {% endif %}
             </div>
             <div id="email-display" class="email-hidden"></div>
         </div>
