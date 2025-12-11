@@ -1121,3 +1121,15 @@ msgstr "Photo of Brice Petit"
 #~| msgid "Development of machine learning algorithms"
 #~ msgid "Development of educational and recreational programs"
 #~ msgstr "Development of educational and recreational programs"
+
+msgid "Topics of interest"
+msgstr "Topics of interest"
+
+msgid "Intelligent 8-puzzle solver using advanced search algorithms and reinforcement learning for path optimization"
+msgstr "Intelligent 8-puzzle solver using advanced search algorithms and reinforcement learning for path optimization"
+
+msgid "Search Algorithms"
+msgstr "Search Algorithms"
+
+msgid "Heuristic Optimization"
+msgstr "Heuristic Optimization"

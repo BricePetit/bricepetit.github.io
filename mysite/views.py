@@ -136,9 +136,15 @@ def skills(request):
         },
         {
             'name': _('Smart Waste Classification'),
-            'url': 'https://github.com/BricePetit/ULB-INFO-F308-G5-1920/blob/master/INFO-G5-presentation.pdf',
+            'url': 'https://github.com/BricePetit/ULB-INFO-F308-G5-1920',
             'description': _('Smart waste bins with automatic waste classification using AI'),
             'tech': ['Python', _('Computer Vision'), 'Raspberry Pi', 'IoT']
+        },
+        {
+            'name': _('8 Puzzle Solver AI'),
+            'url': 'https://github.com/BricePetit/INFO-H410-Project',
+            'description': _('Intelligent 8-puzzle solver using advanced search algorithms and reinforcement learning for path optimization'),
+            'tech': ['Python', _('Reinforcement Learning'), _('Search Algorithms'), _('Heuristic Optimization')]
         }
     ]
     # Skill levels explanation.

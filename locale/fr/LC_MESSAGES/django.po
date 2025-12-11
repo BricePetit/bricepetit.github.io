@@ -1045,3 +1045,12 @@ msgstr "Page Introuvable - Brice Petit"
 # Added translation for "Topics of interest"
 msgid "Topics of interest"
 msgstr "Sujets d'intérêt"
+
+msgid "Intelligent 8-puzzle solver using advanced search algorithms and reinforcement learning for path optimization"
+msgstr "Résolveur de taquin intelligent utilisant des algorithmes de recherche avancés et l'apprentissage par renforcement pour l'optimisation de chemins"
+
+msgid "Search Algorithms"
+msgstr "Algorithmes de Recherche"
+
+msgid "Heuristic Optimization"
+msgstr "Optimisation Heuristique"
