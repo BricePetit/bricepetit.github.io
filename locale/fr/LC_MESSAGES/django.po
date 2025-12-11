@@ -1054,3 +1054,54 @@ msgstr "Algorithmes de Recherche"
 
 msgid "Heuristic Optimization"
 msgstr "Optimisation Heuristique"
+
+msgid "Research Engineer in Artificial Intelligence"
+msgstr "Ingénieur de Recherche en Intelligence Artificielle"
+
+msgid "September 2023 - Present"
+msgstr "Septembre 2023 - Présent"
+
+msgid "1+ years"
+msgstr "1+ ans"
+
+msgid "Building Manager"
+msgstr "Syndic de Copropriété"
+
+msgid "Residential Co-ownership Management"
+msgstr "Gestion de Copropriété Résidentielle"
+
+msgid "Voluntary role"
+msgstr "Rôle Bénévole"
+
+msgid "Management of 4-unit residential property"
+msgstr "Gestion d'un immeuble résidentiel de 4 appartements"
+
+msgid "Building administration and property management"
+msgstr "Administration de l'immeuble et gestion immobilière"
+
+msgid "Financial oversight and budget planning"
+msgstr "Contrôle financier et planification budgétaire"
+
+msgid "Maintenance coordination and contractor supervision"
+msgstr "Coordination de la maintenance et supervision des entrepreneurs"
+
+msgid "Resident communication and conflict resolution"
+msgstr "Communication avec les résidents et résolution de conflits"
+
+msgid "Effective financial management and budget control"
+msgstr "Gestion financière efficace et contrôle budgétaire"
+
+msgid "Successful coordination of building renovations"
+msgstr "Coordination réussie des rénovations de l'immeuble"
+
+msgid "Improved communication among residents"
+msgstr "Amélioration de la communication entre résidents"
+
+msgid "Implementation of energy efficiency initiatives"
+msgstr "Mise en œuvre d'initiatives d'efficacité énergétique"
+
+msgid "Diocesan Youth Service"
+msgstr "Service de la Jeunesse Diocésain"
+
+msgid "Lille, France"
+msgstr "Lille, France"

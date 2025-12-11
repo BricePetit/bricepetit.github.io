@@ -1133,3 +1133,54 @@ msgstr "Search Algorithms"
 
 msgid "Heuristic Optimization"
 msgstr "Heuristic Optimization"
+
+msgid "Research Engineer in Artificial Intelligence"
+msgstr "Research Engineer in Artificial Intelligence"
+
+msgid "September 2023 - Present"
+msgstr "September 2023 - Present"
+
+msgid "1+ years"
+msgstr "1+ years"
+
+msgid "Building Manager"
+msgstr "Building Manager"
+
+msgid "Residential Co-ownership Management"
+msgstr "Residential Co-ownership Management"
+
+msgid "Voluntary role"
+msgstr "Voluntary role"
+
+msgid "Management of 4-unit residential property"
+msgstr "Management of 4-unit residential property"
+
+msgid "Building administration and property management"
+msgstr "Building administration and property management"
+
+msgid "Financial oversight and budget planning"
+msgstr "Financial oversight and budget planning"
+
+msgid "Maintenance coordination and contractor supervision"
+msgstr "Maintenance coordination and contractor supervision"
+
+msgid "Resident communication and conflict resolution"
+msgstr "Resident communication and conflict resolution"
+
+msgid "Effective financial management and budget control"
+msgstr "Effective financial management and budget control"
+
+msgid "Successful coordination of building renovations"
+msgstr "Successful coordination of building renovations"
+
+msgid "Improved communication among residents"
+msgstr "Improved communication among residents"
+
+msgid "Implementation of energy efficiency initiatives"
+msgstr "Implementation of energy efficiency initiatives"
+
+msgid "Diocesan Youth Service"
+msgstr "Diocesan Youth Service"
+
+msgid "Lille, France"
+msgstr "Lille, France"
