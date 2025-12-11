@@ -45,6 +45,7 @@ def skills(request):
     # Programming languages with levels.
     programming_languages = {
         _('Python'): {'level': _('Advanced'), 'description': _('Main language for ML and DL, data science and web development')},
+        _('Bash'): {'level': _('Intermediate'), 'description': _('Scripting and automation')},
         _('C++'): {'level': _('Intermediate'), 'description': _('Code optimization and climate simulation')},
         _('Java'): {'level': _('Intermediate'), 'description': _('Object-oriented development and enterprise applications')},
         _('R'): {'level': _('Intermediate'), 'description': _('Statistical analysis and data science')},
@@ -56,6 +57,9 @@ def skills(request):
         _('PyTorch'): {'level': _('Advanced'), 'description': _('Deep learning research and prototyping')},
         _('Scikit-learn'): {'level': _('Advanced'), 'description': _('Classical machine learning and preprocessing')},
         _('XGBoost'): {'level': _('Advanced'), 'description': _('Gradient boosting for time series and prediction')},
+        _('CNN'): {'level': _('Advanced'), 'description': _('Convolutional Neural Networks for image/sequence modelling')},
+        _('LSTM'): {'level': _('Advanced'), 'description': _('Long Short-Term Memory networks for sequential data')},
+        _('Transformer'): {'level': _('Advanced'), 'description': _('Attention-based architectures for sequence modelling')},
     }
     # Data Science Tools.
     data_tools = {
@@ -75,6 +79,8 @@ def skills(request):
     devops_tools = {
         _('Docker'): {'level': _('Intermediate'), 'description': _('Containerization and deployment')},
         _('Git'): {'level': _('Advanced'), 'description': _('Version control and collaboration')},
+        _('Ansible'): {'level': _('Beginner'), 'description': _('Configuration management and automation')},
+        _('Systemd'): {'level': _('Intermediate'), 'description': _('Service management and unit configuration on Linux')},
     }
     # Expertise domains.
     expertise_domains = {
@@ -218,16 +224,18 @@ def education(request):
             'contract_type': _('Full-time'),
             'context': _('FARI & AIEG Collaboration'),
             'responsibilities': [
-                _('AI and machine learning applied to energy systems'),
-                _('Teaching assistant in computer science'),
-                _('Development and deployment of machine learning models'),
-                _('Student supervision and technical project support')
+                _('Collaborated with Innoviris, AIEG and Renewgy on applied research projects'),
+                _('Design and deployment of a real-time energy data collection and visualization system for citizen energy communities (Cassandra, Python, Django)'),
+                _('Research and development of non-intrusive load monitoring (NILM) models for electrical disaggregation'),
+                _('Design of predictive models for solar production and consumption to optimise PV investments and support grid balancing (XGBoost, CNN, LSTM, Transformer)'),
+                _('Teaching assistant duties and supervision of student projects (individual and group)')
             ],
             'achievements': [
-                _('Development of energy prediction models (XGBoost, CNN, LSTM, Transformer)'),
-                _('Data collection from 100+ households via IoT'),
-                _('Creation of NoSQL database (Cassandra) for big data'),
-                _('Django web interface for energy data visualization')
+                _('Deployed a production-ready real-time data pipeline and visualization stack for community energy projects'),
+                _('Implemented NILM models for electrical disaggregation and integrated them into the analytics workflow'),
+                _('Built predictive models for photovoltaic production and consumption to inform investment decisions and improve network stability (XGBoost, CNN, LSTM, Transformer)'),
+                _('Created and maintained a scalable NoSQL data backend (Cassandra) to handle high-frequency energy data'),
+                _('Supervised and mentored students on multiple successful research and engineering projects')
             ],
             'tech_stack': ['Python', 'TensorFlow', 'PyTorch', 'XGBoost', 'Cassandra', 'Django', 'Raspberry Pi'],
             'is_current': True
@@ -236,9 +244,9 @@ def education(request):
             'period': _('2023 - Present'),
             'duration': _('1+ years'),
             'job_title': _('Building Manager'),
-            'company': _('Residential Co-ownership Management'),
+            'company': 'ACP JO57',
             'location': _('Brussels, Belgium'),
-            'contract_type': _('Voluntary role'),
+            'contract_type': _('Volunteer'),
             'context': _('Management of 4-unit residential property'),
             'responsibilities': [
                 _('Building administration and property management'),
@@ -250,7 +258,6 @@ def education(request):
                 _('Effective financial management and budget control'),
                 _('Successful coordination of building renovations'),
                 _('Improved communication among residents'),
-                _('Implementation of energy efficiency initiatives')
             ],
             'tech_stack': [],
             'is_current': True

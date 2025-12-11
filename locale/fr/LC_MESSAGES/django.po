@@ -544,6 +544,45 @@ msgstr "Git"
 msgid "Version control and collaboration"
 msgstr "Contrôle de version et collaboration"
 
+# DevOps additions
+msgid "Ansible"
+msgstr "Ansible"
+
+msgid "Configuration management and automation"
+msgstr "Gestion de configuration et automatisation"
+
+msgid "Systemd"
+msgstr "Systemd"
+
+msgid "Service management and unit configuration on Linux"
+msgstr "Gestion des services et configuration des unités sous Linux"
+
+# Shell / scripting
+msgid "Bash"
+msgstr "Bash"
+
+msgid "Scripting and automation"
+msgstr "Scripts et automatisation"
+
+# ML model architectures
+msgid "CNN"
+msgstr "CNN"
+
+msgid "Convolutional Neural Networks for image/sequence modelling"
+msgstr "Réseaux convolutionnels pour la modélisation d'images et de séquences"
+
+msgid "LSTM"
+msgstr "LSTM"
+
+msgid "Long Short-Term Memory networks for sequential data"
+msgstr "Réseaux LSTM pour données séquentielles"
+
+msgid "Transformer"
+msgstr "Transformer"
+
+msgid "Attention-based architectures for sequence modelling"
+msgstr "Architectures basées sur l'attention pour la modélisation de séquences"
+
 #: mysite/views.py:81
 msgid "Supervised Machine Learning"
 msgstr "Machine Learning Supervisé"
@@ -1071,10 +1110,16 @@ msgid "Residential Co-ownership Management"
 msgstr "Gestion de Copropriété Résidentielle"
 
 msgid "Voluntary role"
-msgstr "Rôle Bénévole"
+msgstr "Bénévole"
 
 msgid "Management of 4-unit residential property"
 msgstr "Gestion d'un immeuble résidentiel de 4 appartements"
+
+msgid "Design of predictive models for solar production and consumption to optimise PV investments and support grid balancing (XGBoost, CNN, LSTM, Transformer)"
+msgstr "Conception de modèles de prédiction pour la production solaire et la consommation afin d'optimiser les investissements photovoltaïques et maintenir l'équilibre du réseau (XGBoost, CNN, LSTM, Transformer)"
+
+msgid "Built predictive models for photovoltaic production and consumption to inform investment decisions and improve network stability (XGBoost, CNN, LSTM, Transformer)"
+msgstr "Conception et déploiement de modèles prédictifs pour la production photovoltaïque et la consommation afin d'éclairer les décisions d'investissement et améliorer la stabilité du réseau (XGBoost, CNN, LSTM, Transformer)"
 
 msgid "Building administration and property management"
 msgstr "Administration de l'immeuble et gestion immobilière"
@@ -1096,9 +1141,6 @@ msgstr "Coordination réussie des rénovations de l'immeuble"
 
 msgid "Improved communication among residents"
 msgstr "Amélioration de la communication entre résidents"
-
-msgid "Implementation of energy efficiency initiatives"
-msgstr "Mise en œuvre d'initiatives d'efficacité énergétique"
 
 msgid "Diocesan Youth Service"
 msgstr "Service de la Jeunesse Diocésain"
