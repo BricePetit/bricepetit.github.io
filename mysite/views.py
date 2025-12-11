@@ -233,6 +233,29 @@ def education(request):
             'is_current': True
         },
         {
+            'period': _('2023 - Present'),
+            'duration': _('1+ years'),
+            'job_title': _('Building Manager'),
+            'company': _('Residential Co-ownership Management'),
+            'location': _('Brussels, Belgium'),
+            'contract_type': _('Voluntary role'),
+            'context': _('Management of 4-unit residential property'),
+            'responsibilities': [
+                _('Building administration and property management'),
+                _('Financial oversight and budget planning'),
+                _('Maintenance coordination and contractor supervision'),
+                _('Resident communication and conflict resolution')
+            ],
+            'achievements': [
+                _('Effective financial management and budget control'),
+                _('Successful coordination of building renovations'),
+                _('Improved communication among residents'),
+                _('Implementation of energy efficiency initiatives')
+            ],
+            'tech_stack': [],
+            'is_current': True
+        },
+        {
             'period': _('2022 - 2025'),
             'duration': _('3 years'),
             'job_title': _('Youth Movement Coordinator'),
@@ -294,29 +317,6 @@ def education(request):
             ],
             'tech_stack': [],
             'is_current': False
-        },
-        {
-            'period': _('September 2023 - Present'),
-            'duration': _('1+ years'),
-            'job_title': _('Building Manager'),
-            'company': _('Residential Co-ownership Management'),
-            'location': _('Brussels, Belgium'),
-            'contract_type': _('Voluntary role'),
-            'context': _('Management of 4-unit residential property'),
-            'responsibilities': [
-                _('Building administration and property management'),
-                _('Financial oversight and budget planning'),
-                _('Maintenance coordination and contractor supervision'),
-                _('Resident communication and conflict resolution')
-            ],
-            'achievements': [
-                _('Effective financial management and budget control'),
-                _('Successful coordination of building renovations'),
-                _('Improved communication among residents'),
-                _('Implementation of energy efficiency initiatives')
-            ],
-            'tech_stack': [],
-            'is_current': True
         },
         {
             'period': '2014 - 2017',
