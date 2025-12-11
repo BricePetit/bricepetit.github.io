@@ -583,7 +583,7 @@ msgstr "Time analysis techniques, trend and seasonality detection"
 
 #: mysite/views.py:83
 msgid "Energy Forecasting"
-msgstr "PhD Student in AI & Energy Forecasting"
+msgstr "Research Engineer in AI & Energy Forecasting"
 
 #: mysite/views.py:83
 msgid "Energy consumption and production prediction in business context"

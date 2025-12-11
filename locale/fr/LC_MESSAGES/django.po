@@ -602,7 +602,7 @@ msgstr ""
 
 #: mysite/views.py:83
 msgid "Energy Forecasting"
-msgstr "Prédiction Énergétique"
+msgstr "Ingénieur de recherche en IA et prévision énergétique"
 
 #: mysite/views.py:83
 msgid "Energy consumption and production prediction in business context"
@@ -1120,6 +1120,31 @@ msgstr "Conception de modèles de prédiction pour la production solaire et la c
 
 msgid "Built predictive models for photovoltaic production and consumption to inform investment decisions and improve network stability (XGBoost, CNN, LSTM, Transformer)"
 msgstr "Conception et déploiement de modèles prédictifs pour la production photovoltaïque et la consommation afin d'éclairer les décisions d'investissement et améliorer la stabilité du réseau (XGBoost, CNN, LSTM, Transformer)"
+
+# Translations for Research Engineer responsibilities/achievements
+msgid "Collaborated with Innoviris, AIEG and Renewgy on applied research projects"
+msgstr "Collaboration avec Innoviris, AIEG et Renewgy dans le cadre de projets de recherche appliquée"
+
+msgid "Design and deployment of a real-time energy data collection and visualization system for citizen energy communities (Cassandra, Python, Django)"
+msgstr "Conception et déploiement d'un système de collecte et de visualisation de données énergétiques en temps réel pour des communautés d'énergie citoyennes (Cassandra, Python, Django)"
+
+msgid "Research and development of non-intrusive load monitoring (NILM) models for electrical disaggregation"
+msgstr "Recherche et développement de modèles de désagrégation électrique non intrusifs (NILM)"
+
+msgid "Teaching assistant duties and supervision of student projects (individual and group)"
+msgstr "Fonctions d'assistant d'enseignement et encadrement de projets étudiants (individuels et en groupe)"
+
+msgid "Deployed a production-ready real-time data pipeline and visualization stack for community energy projects"
+msgstr "Mise en production d'un pipeline de données temps réel et d'une interface de visualisation pour des projets d'énergie communautaire"
+
+msgid "Implemented NILM models for electrical disaggregation and integrated them into the analytics workflow"
+msgstr "Implémentation de modèles NILM pour la désagrégation électrique et intégration dans le flux d'analyse"
+
+msgid "Created and maintained a scalable NoSQL data backend (Cassandra) to handle high-frequency energy data"
+msgstr "Conception et maintenance d'un backend NoSQL scalable (Cassandra) pour gérer des données énergétiques à haute fréquence"
+
+msgid "Supervised and mentored students on multiple successful research and engineering projects"
+msgstr "Supervision et mentorat d'étudiants sur plusieurs projets de recherche et d'ingénierie réussis"
 
 msgid "Building administration and property management"
 msgstr "Administration de l'immeuble et gestion immobilière"
